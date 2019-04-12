@@ -1,0 +1,7 @@
+.TestScenerio {
+    display: flex;
+    flex-flow: row;
+    align-content: space-between;
+    align-items: center;
+    width: 100%;
+}

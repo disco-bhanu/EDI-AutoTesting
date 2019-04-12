@@ -1,0 +1,28 @@
+.Fields {
+    margin: 0 20px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.Fields ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.Fields ul li {
+    margin-top: -1px;
+    border: 1px solid #ddd;
+    padding: 8px;
+    border-radius: 5px;
+    width: 100%;
+    display: flex;
+    box-sizing: border-box;
+}
+
+.Fields ul li:hover {
+    background-color: #f6f6f6;
+    border-left: 1px solid steelblue;
+    border-right: 1px solid steelblue;
+}

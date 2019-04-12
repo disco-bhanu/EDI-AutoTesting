@@ -1,0 +1,96 @@
+.ConnectToSI {
+    display: block;
+    background-color: #fff;
+    box-shadow: 0 2px 3px #ccc;
+    height: fit-content;
+    width: 80%;
+    margin: auto;
+    margin-top: 20px;
+    padding: 16px;
+    box-sizing: border-box;
+}
+
+.ConnectToSI input:focus {
+    border: 1px solid black;
+}
+
+.ConnectToSI button {
+    background-color: #fff;
+    border: 1px solid black;
+    border-radius: 2px;
+    color: black;
+    padding: 6px 15px;
+    margin: 5px;
+    font-size: smaller;
+    cursor: pointer;
+    box-shadow: 0 1px 2px #ccc;
+}
+
+.ConnectToSI button:hover {
+    background-color: black;
+    color: white;
+}
+
+.ConnectToSI h5 {
+    margin: 0;
+}
+
+.ConnectToSI ul {
+    list-style-type: none;
+    margin: 0 20px;
+    padding: 0;
+}
+
+.ConnectToSI ul li {
+    margin-top: -1px;
+    border: 1px solid #ddd;
+    padding: 8px;
+    border-radius: 5px;
+    width: 100%;
+    display: flex;
+}
+
+.ConnectToSI ul li input {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.UploadButton {
+    display: block;
+    height: fit-content;
+    padding: 5px 10px;
+    background-color: white;
+    border: 1px solid black;
+    color: black;
+    box-sizing: border-box;
+    box-shadow: 0 1px 2px #ccc;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.UploadButton:hover {
+    color: white;
+    background-color: black;
+}
+
+.Actions {
+    display: flex;
+    align-items: flex-end;
+    margin-top: 10px;
+}
+
+.UploadSuccess {
+    padding: 5px 10px;
+    color: green;
+    border: 1px solid green;
+    border-radius: 50px;
+}
+
+.UploadProgress {
+    padding: 5px 10px;
+    color: orange;
+    border: 1px solid orange;
+    border-radius: 50px;
+}

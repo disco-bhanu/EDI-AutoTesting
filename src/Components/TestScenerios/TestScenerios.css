@@ -1,0 +1,38 @@
+.TestScenerios {
+    margin: 0 20px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.TestScenerios ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.TestScenerios ul li {
+    margin-top: -1px;
+    border: 1px solid #ddd;
+    padding: 8px;
+    border-radius: 5px;
+    width: 100%;
+    display: flex;
+}
+
+.TestScenerios ul li:hover {
+    background-color: #f6f6f6;
+    border-left: 3px solid steelblue;
+}
+
+.TestScenerios h4 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.TestScenerios h5 {
+    margin-top: 8px;
+    margin-bottom: 5px;
+    margin-left: 0;
+    margin-right: 0;
+}

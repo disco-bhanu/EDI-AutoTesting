@@ -1,0 +1,16 @@
+.Segment {
+    margin: auto;
+    display: block;
+    height: fit-content;
+    width: 80%;
+    background-color: #fff;
+    box-shadow: 0 2px 3px #ccc;
+    box-sizing: border-box;
+    margin-top: 20px;
+    padding: 16px;
+}
+
+.Segment h5 {
+    margin: 0;
+    text-transform: uppercase;
+}

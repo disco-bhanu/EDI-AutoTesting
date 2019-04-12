@@ -1,0 +1,29 @@
+.Toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #4a4a4a;
+    box-sizing: border-box;
+    box-shadow: 0 2px 5px #7d7d7d;
+    height: 45px;
+    width: auto;
+    z-index: 80;
+    padding: 8px 8px;
+}
+
+.Toolbar h3 {
+    color: white;
+    margin: 0;
+    
+}
+
+.Toolbar li {
+    list-style: none;
+    color: wheat;
+}
+
+.Toolbar a {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
