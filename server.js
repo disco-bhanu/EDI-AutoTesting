@@ -1,5 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const cookieParser = require('cookie-parser');
 const cors = require('cors');
 const multer = require('multer');
 const mongoose = require('mongoose');
@@ -11,11 +12,13 @@ const router = require('./server/router.js');
 
 app.options('*', cors()) ;
 app.use(function (req, res, next) {
-    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
+    res.setHeader('Access-Control-Allow-Credentials', true);
     next()
 });
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
+app.use(cookieParser());
 app.use(express.static(__dirname + '/build'));
 app.use("/upload",upload.any(), router);
 app.use("/server", router);

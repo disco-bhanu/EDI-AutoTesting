@@ -3,9 +3,7 @@ const mongoose = require('mongoose');
 var conn = null;
 
 async function connection() {
-    if(conn === null) {
-        await mongoose.connect('mongodb://localhost:27017/local', { useNewUrlParser: true });
-    }
+    await mongoose.connect('mongodb://localhost:27017/local', { useNewUrlParser: true });
 }
 /*
 function save(file, uid, res) {

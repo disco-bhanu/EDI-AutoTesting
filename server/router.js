@@ -8,6 +8,8 @@ const mongoClient = require('./mongoDB.js');
 
 const Process = require('../controller/processfiles');
 
+const Generate = require('../controller/generateTestCases');
+
 let txofile = null;
 
 let testdata = null;
@@ -17,8 +19,14 @@ router.post('/', (req, res) => {
     ProcessFiles.processfiles(req, res);
 })
 
-router.get('/test', (req, res) => {
+router.get('/execute', (req, res) => {
+    console.log(req.cookies);
+    const GenerateTestCases = new Generate();
+    GenerateTestCases.process(req, res);
 
+})
+
+router.get('/test', (req, res) => {
     var options = { 
         method: 'POST',
         url: 'http://ln0487.homedepot.com:45538/maptest',

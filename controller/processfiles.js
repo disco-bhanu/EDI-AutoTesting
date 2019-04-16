@@ -5,39 +5,53 @@ const mongoose = require('mongoose');
 
 const mongooseClient = require('../server/mongooseDB');
 const pdfProcess = require('../server/pdfToJSON');
-const TestFileModel = require('../model/testFileModel');
+const FileIDModel = require('../model/fileIDModel');
 
 class Process {
 
     constructor() {
-        this.pdfjson = null;
-        this.uid = uuid();
-        this.txosaved = false;
-        this.datasaved = false;
+        this.testID = uuid();
+        this.handlepdf = {};
+        this.handletxo = {};
+        this.handledata = {};
+        this.response = {
+            pdf: { processed: false, data: null },
+            txo: { processed: false },
+            data: { processed: false }
+        }
     }
 
-    processfiles(req, res) {
+    async processfiles(req, res) {
+        console.log('express', req.headers.cookie)
+        console.log('Got cookie', req.cookies);
         req.files.map(f => {
             console.log('inside');
             console.log(f);
             switch (true) {
                 case f.originalname.search(/.pdf$/) > -1:
-                    pdfProcess(f.buffer, this.pdfProcessCB.bind(this));
+                    this.handlepdf = {
+                        data: f.buffer,
+                        type: 'pdf',
+                        name: f.originalname,
+                        id: this.testID
+                    };
                     break;
                 case f.originalname.search(/.txo$/) > -1:
-                    this.savefiles({
-                        name: f.originalname,
+                    this.handletxo = {
                         data: f.buffer,
-                        type: "txo"});
+                        type: 'txo',
+                        name: f.originalname
+                    }
                     break;
                 case f.originalname.search(/.data$/) > -1:
                 case f.originalname.search(/.dat$/) > -1:
                 case f.originalname.search(/.doc$/) > -1:
                 case f.originalname.search(/.txt$/) > -1:
-                    this.savefiles({
-                        name: f.originalname,
+                    this.handledata = {
                         data: f.buffer.toString(),
-                        type: "data"});
+                        type: 'data',
+                        name: f.originalname
+                    }
                     break;
                 default:
                     console.log(f);
@@ -45,14 +59,46 @@ class Process {
                     break;
             }
         });
-        console.log(this.txosaved);
-        console.log(this.datasaved);
-        res.send(JSON.stringify(this.pdfjson, undefined, 2));
-    }
-    
-    pdfProcessCB(edijson) {
-        this.pdfjson = edijson;
-        //this.res.send(JSON.stringify(this.pdfjson, undefined, 2));
+
+        pdfProcess(this.handlepdf, async (data) => {
+            this.response.pdf.data = data;
+            this.handlepdf.data = JSON.stringify(data);
+            this.handlepdf.name = this.testID + '.json';
+            try {
+                await this.savefiles(this.handlepdf);
+                await this.savefiles(this.handletxo);
+                await this.savefiles(this.handledata);
+                res.cookie('testID', this.testID, {maxAge: 900000, httpOnly: true});
+                res.json(this.response);
+            }
+            catch(e) {
+                console.log(e);
+                res.json({error: 'unable to process request'});
+            }
+            /* this.savefiles(this.handlepdf)
+                .then(() => {
+                    this.response.pdf.processed = true;
+                    this.savefiles(this.handletxo)
+                        .then(() => {
+                            this.response.txo.processed = true; 
+                            this.savefiles(this.handledata)
+                                .then(() => {
+                                    this.response.data.processed = true;
+                                    res.cookie('testID', this.testID, {maxAge: 900000, httpOnly: true});
+                                    res.json(this.response);
+                                })
+                                .catch((err) => {
+                                    res.json(this.response);
+                                })
+                        })
+                        .catch((err) => {
+                            res.json(this.response);
+                        })
+                })
+                .catch(err => {
+                    res.json(this.response);
+                })*/
+        })
     }
     
     savefiles(file) {
@@ -60,28 +106,29 @@ class Process {
         datastream.end(file.data);
         const conn = mongooseClient.conn;
         if(true) {
-            const bucket = new mongoose.mongo.GridFSBucket(conn.db, {bucketName: 'edi_test_inputs'});        
-            datastream.pipe(
-                bucket.openUploadStream(newFileNameWithTimestamp(file.name), {contentType: file.type}))
-                .on('error', err => console.log(err))
-                .once('finish', record => {
-                    console.log('finish');
-                    const testfileModel = new TestFileModel({
-                        file_id: record.md5,
-                        test_id: this.uid
+            const bucket = new mongoose.mongo.GridFSBucket(conn.db, {bucketName: 'edi_test_inputs'}); 
+            return new Promise((resolve, reject) => {
+                datastream.pipe(bucket.openUploadStream(newFileNameWithTimestamp(file.name), {contentType: file.type}))
+                    .on('error', err => console.log(err))
+                    .once('finish', record => {
+                        const FileID = new FileIDModel({
+                            file_id: record._id,
+                            test_id: this.testID,
+                            file_type: file.type
+                        });
+                        try {
+                            const result = FileID.save();
+                            result.then(() => {
+                                this.response[file.type].processed = true;
+                                resolve('saved');
+                            })
+                        }
+                        catch(err) {
+                            reject('failed');
+                            throw err;
+                        }
                     });
-                    try {
-                        const result = testfileModel.save();
-                        result.then(() => {
-                            file.type === 'txo' ? this.txosaved = true : '';
-                            file.type === 'data' ? this.datasaved = true : '';
-                        })
-                    }
-                    catch(err) {
-                        throw err;
-                    }
-                    //res.send({fileType: file.type});
-                });
+            })  
         }
     }
 }

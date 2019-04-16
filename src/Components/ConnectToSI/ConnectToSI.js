@@ -36,44 +36,67 @@ class ConnectToSI extends React.Component {
     }
 
     onExecuteTestCasesHandler() {
-        if(this.state.pdf.filename !== null && this.state.txo.filename !== null && this.state.data.filename !== null) {
+        if(this.state.pdf.upload !== null && this.state.txo.upload !== null && this.state.data.upload !== null) {
             this.props.execute();
+            axios.get('http://localhost:8080/server/execute', {withCredentials: true})
+                .then(res => {
+                    console.log(res);
+                })
         } else {
             alert('Please upload files before proceeding further.')
         }
     }
 
     onUploadHandler() {
-        axios.post('http://localhost:8080/upload', this.form)
-        .then(res=> {
-            console.log(res);
-            this.props.data(res.data);
-        })
-        .catch(err => {
-            console.log(err)
-        }) 
+        this.setState((prev, props) => {
+            return { 
+                pdf: { filename: prev.pdf.filename, upload: false }, 
+                txo: { filename: prev.txo.filename, upload: false },
+                data: { filename: prev.data.filename, upload: false }
+            }
+        });
+        axios.post('http://localhost:8080/upload', this.form, {withCredentials: true})
+            .then(res=> {
+                console.log(res);
+                if(res.data.pdf.processed) {
+                    this.props.data(res.data.pdf.data);
+                    this.setState(prev => {
+                        return { pdf: { filename: prev.pdf.filename, upload: true } }
+                    });
+                };
+                if(res.data.txo.processed) {
+                    this.setState(prev => {
+                        return { txo: { filename: prev.txo.filename, upload: true } }
+                    });
+                }
+                if(res.data.data.processed) {
+                    this.setState(prev => {
+                        return { data: { filename: prev.data.filename, upload: true } }
+                    });
+                }
+            })
+            .catch(err => {
+                console.log(err)
+            }) 
     }
 
     onChangeHandler = (e) => {
         console.log(e.target);
         switch(e.target.name) {
-            case "pdf":
-                this.setState({ pdf: { filename: e.target.files[0].name, upload: false} });
+            case 'pdf':
+                this.setState({pdf: {filename: e.target.files[0].name, upload: null}});
                 this.form.set('pdf', e.target.files[0]);
                 this.form.set('filename', e.target.files[0].name);
-                //this.onUploadHandler(form);
                 break;
-            case "txo":
-                this.setState({ txo: { filename: e.target.files[0].name, upload: false} });
+            case 'txo':
+                this.setState({txo: {filename: e.target.files[0].name, upload: null}});
                 this.form.set('txo', e.target.files[0]);
                 this.form.set('txo_filename', e.target.files[0].name);
-                //this.onUploadHandler(form);
                 break;
-            case "test":
-                this.setState({ data: { filename: e.target.files[0].name, upload: false} });
+            case 'test':
+                this.setState({data: {filename: e.target.files[0].name, upload: null}});
                 this.form.set('data', e.target.files[0]);
                 this.form.set('data_filename', e.target.files[0].name);
-                //this.onUploadHandler(form);
                 break;
             default:
                 console.log("Nothing");

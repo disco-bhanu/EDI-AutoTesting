@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 
 mongoose.set('debug', true);
 
-const testfile = new Schema({
+const FileID = new Schema({
     file_id: {
         type: String,
         required: true
@@ -12,7 +12,11 @@ const testfile = new Schema({
     test_id: {
         type: String,
         required: true
+    },
+    file_type: {
+        type: String,
+        required: true
     }
 }, {collection: 'edi_test_inputs', timestamps: true});
 
-module.exports = mongoose.model('TestFileModel', testfile);
+module.exports = mongoose.model('FileIDModel', FileID);

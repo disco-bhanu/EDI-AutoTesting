@@ -8,9 +8,14 @@ let state = {
     atDetails: false
 }
 
-function run(buffer, cb) {
-
+function parser(file, cb) {
     let pdfParser = new PDFParser();
+    pdfParser.on("pdfParser_dataError", errData => console.error(errData.parserError));
+    pdfParser.on("pdfParser_dataReady", data => handlePDFJSONData(data, file.id, cb));
+    pdfParser.parseBuffer(file.data);
+}
+
+function handlePDFJSONData(pdfData, testID, cb) {  
 
     let textArray = [];
 
@@ -38,9 +43,6 @@ function run(buffer, cb) {
 
     let range = 0;
 
-    pdfParser.on("pdfParser_dataError", errData => console.error(errData.parserError));
-
-    pdfParser.on("pdfParser_dataReady", pdfData => {
         pdfData.formImage.Pages.map((page, idx) => {
             if (idx > 3) {
                 page.Texts.map(text => {
@@ -103,6 +105,7 @@ function run(buffer, cb) {
                                     eachElementObj["required"] = 'NA';
                                     eachElementObj["datatype"] = 'NA';
                                     eachElementObj["limit"] = 'NA';
+                                    eachElementObj["testID"] = replaceText(record.T) + '_' + testID;
                                     fieldDataIdx++;
                                 } else if (extractElements) {
                                     switch (fieldDataIdx) {
@@ -157,8 +160,6 @@ function run(buffer, cb) {
         elements.push(eachElementObj);
         EDIJSON[index]["list"] = elements;
         cb(EDIJSON);
-    });
-    pdfParser.parseBuffer(buffer);
 }
 
 function replaceText(text) {
@@ -178,4 +179,4 @@ function setState(s1, s2, s3) {
     }
 }
 
-module.exports = run;
+module.exports = parser;

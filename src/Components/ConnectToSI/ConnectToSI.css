@@ -24,6 +24,7 @@
     font-size: smaller;
     cursor: pointer;
     box-shadow: 0 1px 2px #ccc;
+    outline: none;
 }
 
 .ConnectToSI button:hover {
@@ -68,6 +69,7 @@
     box-shadow: 0 1px 2px #ccc;
     margin-right: 10px;
     cursor: pointer;
+    outline: none;
 }
 
 .UploadButton:hover {
@@ -79,6 +81,7 @@
     display: flex;
     align-items: flex-end;
     margin-top: 10px;
+    outline: none;
 }
 
 .UploadSuccess {
