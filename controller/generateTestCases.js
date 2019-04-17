@@ -17,15 +17,22 @@ class Generate {
         console.log(getFileId.file_id);
         //bucket.openDownloadStreamByName('TestData3_1555445783725.txt')
         bucket.openDownloadStream(mongoose.Types.ObjectId(getFileId.file_id))
-            .on('data', data => spec + data.toString())
+            .on('data', data => {
+                spec = spec + data.toString();
+            })
+            .on('end', () => {
+                let specJSON = JSON.parse(spec);
+                specJSON.forEach(segment => {
+                    //console.log(segment.name);
+                    segment.list.map(field => {
+                        if(field.require === 'M') {
+                            console.log(field.name)
+                        }
+                    })
+                })
+            })
             .on('error', err => console.log(err));
-        res.json({'message': 'Good'});
-        console.log(spec);
-        let specJSON = JSON.parse(spec);
-        specJSON.forEach(segment => {
-            console.log(segment.name)
-        })
-        
+        res.json({'message': 'Good'});        
     }
 }
 
