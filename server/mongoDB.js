@@ -1,11 +1,8 @@
 const mongo = require('mongodb').MongoClient,
     Grid = require('mongodb').GridFSBucket;
 
-const fs = require('fs');
-
 const stream = require('stream');
-
-var _client = null;
+const _client = null;
 
 function connection() {
     if(_client === null) {
@@ -48,7 +45,7 @@ function save(file, uid, res) {
                                 test_id: uid
                             });        
                         }
-                    })
+                    });
                 res.send({fileType: file.type});
             });             
     
@@ -68,13 +65,10 @@ function save(file, uid, res) {
     }
 }
 
-function close() {
-    _client.close();
-}
 
-mongoClient = {
+const mongoClient = {
     conn: connection,
     upload: save
-}
+};
 
 module.exports = mongoClient;

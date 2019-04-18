@@ -3,12 +3,12 @@ const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const cors = require('cors');
 const multer = require('multer');
-const mongoose = require('mongoose');
 const mongooseclient = require('./server/mongooseDB');
 
 const app = express();
 const upload = multer();
 const router = require('./server/router.js');
+
 
 app.options('*', cors()) ;
 app.use(function (req, res, next) {

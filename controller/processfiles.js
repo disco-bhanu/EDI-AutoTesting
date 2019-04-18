@@ -1,4 +1,3 @@
-'use strict';
 const uuid = require("uuid/v4");
 const stream = require('stream');
 const mongoose = require('mongoose');
@@ -22,7 +21,7 @@ class Process {
     }
 
     async processfiles(req, res) {
-        console.log('express', req.headers.cookie)
+        console.log('express', req.headers.cookie);
         console.log('Got cookie', req.cookies);
         req.files.map(f => {
             console.log('inside');
@@ -41,7 +40,7 @@ class Process {
                         data: f.buffer,
                         type: 'txo',
                         name: f.originalname
-                    }
+                    };
                     break;
                 case f.originalname.search(/.data$/) > -1:
                 case f.originalname.search(/.dat$/) > -1:
@@ -51,7 +50,7 @@ class Process {
                         data: f.buffer.toString(),
                         type: 'data',
                         name: f.originalname
-                    }
+                    };
                     break;
                 default:
                     console.log(f);
@@ -135,8 +134,7 @@ class Process {
 
 function newFileNameWithTimestamp(filename) {
     const extension = filename.split('.').reverse()[0];
-    const newfilename = filename.substr(0, filename.indexOf('.' + extension)) + '_' +Date.now() + '.' + extension;
-    return newfilename;
+    return filename.substr(0, filename.indexOf('.' + extension)) + '_' + Date.now() + '.' + extension;
 }
 
 

@@ -1,12 +1,13 @@
-'use strict'
 
+const uuid = require('uuid/v4');
+const fs = require('fs');
 let PDFParser = require("pdf2json");
 
 let state = {
     atSegment: false,
     atDesc: false,
     atDetails: false
-}
+};
 
 function parser(file, cb) {
     let pdfParser = new PDFParser();
@@ -15,49 +16,39 @@ function parser(file, cb) {
     pdfParser.parseBuffer(file.data);
 }
 
-function handlePDFJSONData(pdfData, testID, cb) {  
-
-    let textArray = [];
-
-    let EDIJSON = [];
-
+function handlePDFJSONData(pdfData, testID, cb) {
+    //let textArray = [];
+    let specJSON = [];
     let segmentName = null;
-
     let extractElements = false;
-
     let elements = [];
-
     let eachElementObj = {};
-
     let index = -1;
-
     let fieldDataIdx = 0;
-
     state = {
         atSegment: false,
         atDesc: false,
         atDetails: false
-    }
-
+    };
     let skip = false;
-
     let range = 0;
+    let loopID = null;
 
-        pdfData.formImage.Pages.map((page, idx) => {
+        pdfData.formImage.Pages.forEach((page, idx) => {
             if (idx > 3) {
-                page.Texts.map(text => {
+                page.Texts.forEach(text => {
                     if (text.y > 4.5 && text.y < 45) {
                         let record = text.R[0];
                         switch (true) {
                             case (record.TS[1] > 800):
                                 setState(true, false, false);
-                                EDIJSON.push({ name: record.T });
+                                specJSON.push({ name: record.T });
                                 segmentName = record.T;
                                 if (Object.keys(eachElementObj).length > 0) {
                                     elements.push(eachElementObj);
                                 }
                                 if (extractElements) {
-                                    EDIJSON[index]["list"] = elements;
+                                    specJSON[index]["list"] = elements;
                                     elements = [];
                                     eachElementObj = {};
                                 }
@@ -66,15 +57,16 @@ function handlePDFJSONData(pdfData, testID, cb) {
                                 break;
                             case (record.TS[1] > 700 && record.TS[1] < 800):
                                 if (replaceText(record.T).toLowerCase().includes("loop")) {
+                                    loopID = uuid();
                                     skip = true;
                                     break;
                                 }
                                 skip = false;
                                 if (state.atSegment) {
-                                    EDIJSON[index]["description"] = replaceText(record.T);
+                                    specJSON[index]["description"] = replaceText(record.T);
                                 }
                                 if (state.atDesc) {
-                                    EDIJSON[index]["description"] = EDIJSON[index]["description"] + " " + replaceText(record.T);
+                                    specJSON[index]["description"] = specJSON[index]["description"] + " " + replaceText(record.T);
                                 }
                                 setState(false, true, true);
                                 break;
@@ -83,15 +75,16 @@ function handlePDFJSONData(pdfData, testID, cb) {
                             case (state.atDetails):
                                 setState(false, false, true);
                                 if (record.T.includes("Mandatory")) {
-                                    EDIJSON[index]["required"] = true;
+                                    specJSON[index]["required"] = true;
                                 } else if (record.T.includes("Optional")) {
-                                    EDIJSON[index]["required"] = false;
+                                    specJSON[index]["required"] = false;
                                 } else if (record.T.toLowerCase().includes("loop%3a")) {
                                     let filterText = replaceText(record.T);
-                                    EDIJSON[index]["loop"] = filterText.split(": ")[1];
+                                    specJSON[index]["loop"] = filterText.split(": ")[1];
+                                    specJSON[index]["loopID"] = loopID;
                                 } else if (record.T.toLowerCase().includes("max%3a")) {
                                     let filterText = replaceText(record.T);
-                                    EDIJSON[index]["max"] = filterText.split(": ")[1];
+                                    specJSON[index]["max"] = filterText.split(": ")[1];
                                 } else if (record.T.includes(segmentName) && replaceText(record.T).length < 10) {
                                     if (Object.keys(eachElementObj).length > 0) {
                                         elements.push(eachElementObj);
@@ -105,7 +98,7 @@ function handlePDFJSONData(pdfData, testID, cb) {
                                     eachElementObj["required"] = 'NA';
                                     eachElementObj["datatype"] = 'NA';
                                     eachElementObj["limit"] = 'NA';
-                                    eachElementObj["testID"] = replaceText(record.T) + '_' + testID;
+                                    eachElementObj["testID"] = uuid();
                                     fieldDataIdx++;
                                 } else if (extractElements) {
                                     switch (fieldDataIdx) {
@@ -147,28 +140,30 @@ function handlePDFJSONData(pdfData, testID, cb) {
                                         default:
                                             eachElementObj["other"] = replaceText(record.T);
                                     }
-                                };
+                                }
                                 break;
                             default:
                         }
-                        textArray.push(replaceText(record.T))
+                        //textArray.push(replaceText(record.T))
                     }
                 })
 
             }
-        })
+        });
         elements.push(eachElementObj);
-        EDIJSON[index]["list"] = elements;
-        cb(EDIJSON);
+        specJSON[index]["list"] = elements;
+        fs.writeFile("./edi.json", JSON.stringify(specJSON, undefined, 2), (err) => {
+            console.log(err);
+        });
+        cb(specJSON);
 }
 
 function replaceText(text) {
-    let filter = text.split("%20").join(" ")
+    return text.split("%20").join(" ")
         .split("%2F").join("/")
         .split("%3A").join(":")
         .split("%3E").join(">")
         .split("%2C").join(",");
-    return filter;
 }
 
 function setState(s1, s2, s3) {

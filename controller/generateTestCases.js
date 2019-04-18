@@ -1,8 +1,7 @@
-'use strict';
-
 const mongoose = require('mongoose');
 const mongooseClient = require('../server/mongooseDB');
 const FileIDModel = require('../model/fileIDModel');
+const TestCasesModel = require('../model/testCasesModel');
 
 class Generate {
     constructor(testid) {
@@ -15,7 +14,6 @@ class Generate {
         const conn = mongooseClient.conn;
         const bucket = new mongoose.mongo.GridFSBucket(conn.db, {bucketName: 'edi_test_inputs'});
         console.log(getFileId.file_id);
-        //bucket.openDownloadStreamByName('TestData3_1555445783725.txt')
         bucket.openDownloadStream(mongoose.Types.ObjectId(getFileId.file_id))
             .on('data', data => {
                 spec = spec + data.toString();
@@ -23,10 +21,14 @@ class Generate {
             .on('end', () => {
                 let specJSON = JSON.parse(spec);
                 specJSON.forEach(segment => {
-                    //console.log(segment.name);
                     segment.list.map(field => {
-                        if(field.require === 'M') {
-                            console.log(field.name)
+                        if(field.required === 'M') {
+                            console.log(field.name);
+                            const TestCases = new TestCasesModel({
+                                test_id: req.cookies.testID,
+                                testcase_id: field.testID,
+                                test_data: ''
+                            })
                         }
                     })
                 })
