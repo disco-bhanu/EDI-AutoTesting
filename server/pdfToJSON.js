@@ -81,7 +81,11 @@ function handlePDFJSONData(pdfData, testID, cb) {
                                 } else if (record.T.toLowerCase().includes("loop%3a")) {
                                     let filterText = replaceText(record.T);
                                     specJSON[index]["loop"] = filterText.split(": ")[1];
-                                    specJSON[index]["loopID"] = loopID;
+                                    if(filterText.split(": ")[1] !== 'N/A') {
+                                        specJSON[index]["loopID"] = loopID;
+                                    } else {
+                                        specJSON[index]["loopID"] = null;
+                                    }
                                 } else if (record.T.toLowerCase().includes("max%3a")) {
                                     let filterText = replaceText(record.T);
                                     specJSON[index]["max"] = filterText.split(": ")[1];

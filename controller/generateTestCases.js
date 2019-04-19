@@ -21,7 +21,7 @@ class Generate {
             .on('end', () => {
                 let specJSON = JSON.parse(spec);
                 specJSON.forEach(segment => {
-                    segment.list.map(field => {
+                    segment.list.forEach(field => {
                         if(field.required === 'M') {
                             console.log(field.name);
                             const TestCases = new TestCasesModel({
