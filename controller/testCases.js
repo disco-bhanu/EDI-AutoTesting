@@ -3,7 +3,50 @@ const fs = require('fs');
 
 let data;
 data = fs.readFileSync('../sampleData.txt');
-let splitData = data.toString().split('\r\n').join('').split("~");
+let split = data.toString().split('\r\n').join('').split("~");
+let splitData = split.reduce( (a, c) => [...a, c.split("*")], []);
+fs.writeFileSync('./splitdata.txt', JSON.stringify(splitData, undefined, 2));
+//console.log(split.reverse());
+
+splitData.forEach( (s, i, a) => {
+    let segmentName = s[0];
+    if(segmentName !== 'ISA' && segmentName !== 'GS' && segmentName !== 'ST' && segmentName !== 'SE' && segmentName !== 'GE' && segmentName !== 'IEA') {
+        let specSegmentIndex = specJSON.findIndex(e => e.name === segmentName);
+        if(specSegmentIndex > -1) {
+            let fieldIndex = specJSON[specSegmentIndex].list.reduce( (a, c, j) => {
+                if(c.required === 'M') {
+                    a.push(j+1);
+                }
+                return a;
+            }, [] );
+            fieldIndex.forEach(k => {
+                let copy = a.reduce( (a, c) =>  [...a, [...c]], []);
+                copy[i][k] = '';
+                for(let l = copy[i].length - 1; l > 0; l--) {
+                    if(copy[i][l].length === 0) {
+                        copy[i].pop();
+                    } else {
+                        break;
+                    }
+                }
+                let withDelimiter = copy.map(e => e.join('*')).join('~\n');
+                fs.writeFileSync('./files/'+ Date.now() + '_' + i +'.txt', withDelimiter);
+            })
+        }
+    }
+});
+
+/* let copy = [];
+a.forEach( a1 => {
+    copy.push([...a1]);
+}); */
+
+//let withSegmentDelimiter = withFieldDelimiter.join('~\n');
+/*copy.forEach((e, l) => {
+    copy[l] = copy[l].join('*');
+});*/
+//copy = copy.join('~\n');
+
 //console.log(splitData);
 let dataIndex = 3;
 let looping = null;
@@ -13,7 +56,7 @@ let currLoop = null;
 let prevLoop = null;
 let temp = [];
 
-specJSON.forEach( (s, i) => {
+/*specJSON.forEach( (s, i) => {
     if(s.loopID === null) {
         tempJSON.push(s);
     } else {
@@ -24,7 +67,7 @@ specJSON.forEach( (s, i) => {
             })
             tempJSON.push(temp);
         }
-        prevLoop = currLoop;
+        prevLoop = currLoop; */
         /*currLoop = s.loopID;
         temp.push(s);
         prevLoop = currLoop;
@@ -34,9 +77,9 @@ specJSON.forEach( (s, i) => {
         } else {
             tempJSON[s.loopID].push(s);
         } */
-    }
-});
-
+/*    }
+}); */
+/*
 fs.writeFile('../new.json', JSON.stringify(tempJSON, undefined, 2), (err) => {
     console.log(err);
 })
@@ -61,4 +104,4 @@ for (const segment of specJSON) {
             console.log('here');
         }
     }
-}
+} */
