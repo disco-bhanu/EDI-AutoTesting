@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="63fec4f9-533a-4eb4-8e53-292bfa3f4985" name="Default Changelist" comment="" />
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/controller/testCases.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="188">
+              <caret line="24" column="51" selection-start-line="24" selection-start-column="51" selection-end-line="24" selection-end-column="51" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controller/generateTestCases.js">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controller/processfiles.js">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/pdfToJSON.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2496">
+              <caret line="104" column="70" selection-start-line="104" selection-start-column="36" selection-end-line="104" selection-end-column="70" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>textArray</find>
+      <find>EDIJSON</find>
+      <find>PRF</find>
+      <find>*</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>specJSON</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/server/router.js" />
+        <option value="$PROJECT_DIR$/server.js" />
+        <option value="$PROJECT_DIR$/server/mongoDB.js" />
+        <option value="$PROJECT_DIR$/controller/processfiles.js" />
+        <option value="$PROJECT_DIR$/server/mongooseDB.js" />
+        <option value="$PROJECT_DIR$/controller/generateTestCases.js" />
+        <option value="$PROJECT_DIR$/server/pdfToJSON.js" />
+        <option value="$PROJECT_DIR$/new.json" />
+        <option value="$PROJECT_DIR$/sampleData.txt" />
+        <option value="$PROJECT_DIR$/controller/files/1556043191936.txt" />
+        <option value="$PROJECT_DIR$/controller/files/1556043191940.txt" />
+        <option value="$PROJECT_DIR$/controller/files/1556043191944.txt" />
+        <option value="$PROJECT_DIR$/controller/files/1556043191942.txt" />
+        <option value="$PROJECT_DIR$/controller/files/1556043191946.txt" />
+        <option value="$PROJECT_DIR$/controller/testCases.js" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectConfigurationFiles">
+    <option name="files">
+      <list>
+        <option value="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
+        <option value="$PROJECT_DIR$/.idea/EDI_Testing.iml" />
+        <option value="$PROJECT_DIR$/.idea/misc.xml" />
+        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
+        <option value="$PROJECT_DIR$/.idea/modules.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1696" />
+    <option name="height" value="1026" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="EDI_Testing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="EDI_Testing" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="EDI_Testing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="EDI_Testing" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="EDI_Testing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="EDI_Testing" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../Projects/B2BTools/info-base-ui" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.General" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="NodeJSConfigurationType" path-to-js-file="$PROJECT_DIR$/controller/testCases.js" working-dir="$PROJECT_DIR$/controller">
+      <method v="2" />
+    </configuration>
+    <configuration name="testCases.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/controller/testCases.js" working-dir="$PROJECT_DIR$/controller">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Node.js.testCases.js" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="63fec4f9-533a-4eb4-8e53-292bfa3f4985" name="Default Changelist" comment="" />
+      <created>1555543733046</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1555543733046</updated>
+      <workItem from="1555543737020" duration="705000" />
+      <workItem from="1555595368581" duration="56000" />
+      <workItem from="1555619023430" duration="1644000" />
+      <workItem from="1555623677654" duration="4264000" />
+      <workItem from="1555681320074" duration="5307000" />
+      <workItem from="1555694855824" duration="13192000" />
+      <workItem from="1555944056257" duration="29927000" />
+      <workItem from="1556155588019" duration="2776000" />
+      <workItem from="1556305917308" duration="2236000" />
+    </task>
+    <task id="LOCAL-00001" summary="Looping">
+      <created>1555624170231</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1555624170231</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Looping">
+      <created>1555624476269</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1555624476269</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Looping">
+      <created>1555624528855</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1555624528855</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Looping">
+      <created>1555717572544</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1555717572544</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Looping">
+      <created>1556311567552</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1556311567552</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="60107000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16696805" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="npm" order="2" side_tool="true" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3293011" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.48118278" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3286908" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="8" visible="true" weight="0.21029083" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.14653243" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.32795697" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Looping" />
+    <option name="LAST_COMMIT_MESSAGE" value="Looping" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/controller/files/1556044549293_8.txt" />
+    <entry file="file://$PROJECT_DIR$/controller/files/1556044549297_8.txt" />
+    <entry file="file://$PROJECT_DIR$/controller/files/1556044549261_3.txt" />
+    <entry file="file://$PROJECT_DIR$/edi.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="993">
+          <caret line="523" column="7" selection-start-line="523" selection-start-column="7" selection-end-line="523" selection-end-column="24" />
+          <folding>
+            <element signature="e#4#4988#0" />
+            <element signature="e#163#4984#0" />
+            <element signature="e#4992#7511#0" />
+            <element signature="e#7515#8286#0" />
+            <element signature="e#8290#9667#0" />
+            <element signature="e#10741#12468#0" />
+            <element signature="e#10953#11248#0" />
+            <element signature="e#11256#11547#0" />
+            <element signature="e#11555#11851#0" />
+            <element signature="e#11859#12116#0" />
+            <element signature="e#12124#12458#0" />
+            <element signature="e#12472#13615#0" />
+            <element signature="e#12695#13004#0" />
+            <element signature="e#13012#13270#0" />
+            <element signature="e#13278#13605#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/files/1556048956443_3.txt" />
+    <entry file="file://$PROJECT_DIR$/controller/files/1556048956436_3.txt" />
+    <entry file="file://$PROJECT_DIR$/controller/files/1556048956433_3.txt" />
+    <entry file="file://$PROJECT_DIR$/controller/files/1556049004906_3.txt" />
+    <entry file="file://$PROJECT_DIR$/controller/files/1556049004909_3.txt" />
+    <entry file="file://$PROJECT_DIR$/controller/files/1556049004916_3.txt" />
+    <entry file="file://$PROJECT_DIR$/controller/files/1556049004920_3.txt" />
+    <entry file="file://$PROJECT_DIR$/controller/files/1556049004922_4.txt" />
+    <entry file="file://$PROJECT_DIR$/controller/files/1556049004924_4.txt" />
+    <entry file="file://$PROJECT_DIR$/controller/files/1556049004926_7.txt" />
+    <entry file="file://$PROJECT_DIR$/controller/files/1556049004928_7.txt" />
+    <entry file="file://$PROJECT_DIR$/controller/files/1556050058154_3.txt" />
+    <entry file="file://$PROJECT_DIR$/controller/files/1556050118064_3.txt" />
+    <entry file="file://$PROJECT_DIR$/controller/files/1556050773678_3.txt" />
+    <entry file="file://$PROJECT_DIR$/controller/files/1556050773683_3.txt" />
+    <entry file="file://$PROJECT_DIR$/controller/files/1556050773690_3.txt" />
+    <entry file="file://$PROJECT_DIR$/controller/files/1556050773693_3.txt" />
+    <entry file="file://$PROJECT_DIR$/controller/files/1556050773699_4.txt" />
+    <entry file="file://$PROJECT_DIR$/controller/files/1556050773702_4.txt" />
+    <entry file="file://$PROJECT_DIR$/controller/files/1556050773704_7.txt" />
+    <entry file="file://$PROJECT_DIR$/controller/files/1556050773706_7.txt" />
+    <entry file="file://$PROJECT_DIR$/controller/files/1556050868374_3.txt" />
+    <entry file="file://$PROJECT_DIR$/controller/files/1556050868380_3.txt" />
+    <entry file="file://$PROJECT_DIR$/controller/files/1556050868385_3.txt" />
+    <entry file="file://$PROJECT_DIR$/controller/files/1556050868387_4.txt" />
+    <entry file="file://$PROJECT_DIR$/controller/files/1556050868389_4.txt" />
+    <entry file="file://$PROJECT_DIR$/controller/files/1556050868370_3.txt" />
+    <entry file="file://$PROJECT_DIR$/controller/files/1556074726978_3.txt" />
+    <entry file="file://$PROJECT_DIR$/controller/files/1556074726982_3.txt" />
+    <entry file="file://$PROJECT_DIR$/controller/files/1556074726990_3.txt" />
+    <entry file="file://$PROJECT_DIR$/controller/files/1556074727000_3.txt" />
+    <entry file="file://$PROJECT_DIR$/controller/files/1556074727003_4.txt" />
+    <entry file="file://$PROJECT_DIR$/controller/files/1556074727005_4.txt" />
+    <entry file="file://$PROJECT_DIR$/controller/files/1556074873305_3.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/files/1556074873314_3.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/files/1556074873319_3.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/files/1556074873323_4.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/files/1556074873327_4.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/files/1556074873330_7.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/files/1556074873334_7.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/files/1556074873337_8.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/files/1556074873340_8.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/files/1556074873298_3.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/processfiles.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/pdfToJSON.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2496">
+          <caret line="104" column="70" selection-start-line="104" selection-start-column="36" selection-end-line="104" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/generateTestCases.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/testCases.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="24" column="51" selection-start-line="24" selection-start-column="51" selection-end-line="24" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

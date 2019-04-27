@@ -22,12 +22,16 @@ splitData.forEach( (s, i, a) => {
             fieldIndex.forEach(k => {
                 let copy = a.reduce( (a, c) =>  [...a, [...c]], []);
                 copy[i][k] = '';
+                //console.log(copy[i]);
                 for(let l = copy[i].length - 1; l > 0; l--) {
                     if(copy[i][l].length === 0) {
                         copy[i].pop();
                     } else {
                         break;
                     }
+                }
+                if(copy[i].length === 1) {
+                    copy.splice(i, 1);
                 }
                 let withDelimiter = copy.map(e => e.join('*')).join('~\n');
                 fs.writeFileSync('./files/'+ Date.now() + '_' + i +'.txt', withDelimiter);

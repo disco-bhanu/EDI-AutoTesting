@@ -2,6 +2,7 @@ const mongoose = require('mongoose');
 const mongooseClient = require('../server/mongooseDB');
 const FileIDModel = require('../model/fileIDModel');
 const TestCasesModel = require('../model/testCasesModel');
+const fs = require('fs');
 
 class Generate {
     constructor(testid) {
@@ -35,6 +36,47 @@ class Generate {
             })
             .on('error', err => console.log(err));
         res.json({'message': 'Good'});        
+    }
+
+    testCases() {
+        let data;
+        data = fs.readFileSync('../sampleData.txt');
+        let split = data.toString().split('\r\n').join('').split("~");
+        let splitData = split.reduce( (a, c) => [...a, c.split("*")], []);
+        fs.writeFileSync('./splitdata.txt', JSON.stringify(splitData, undefined, 2));
+        //console.log(split.reverse());
+
+        splitData.forEach( (s, i, a) => {
+            let segmentName = s[0];
+            if(segmentName !== 'ISA' && segmentName !== 'GS' && segmentName !== 'ST' && segmentName !== 'SE' && segmentName !== 'GE' && segmentName !== 'IEA') {
+                let specSegmentIndex = specJSON.findIndex(e => e.name === segmentName);
+                if(specSegmentIndex > -1) {
+                    let fieldIndex = specJSON[specSegmentIndex].list.reduce( (a, c, j) => {
+                        if(c.required === 'M') {
+                            a.push(j+1);
+                        }
+                        return a;
+                    }, [] );
+                    fieldIndex.forEach(k => {
+                        let copy = a.reduce( (a, c) =>  [...a, [...c]], []);
+                        copy[i][k] = '';
+                        //console.log(copy[i]);
+                        for(let l = copy[i].length - 1; l > 0; l--) {
+                            if(copy[i][l].length === 0) {
+                                copy[i].pop();
+                            } else {
+                                break;
+                            }
+                        }
+                        if(copy[i].length === 1) {
+                            copy.splice(i, 1);
+                        }
+                        let withDelimiter = copy.map(e => e.join('*')).join('~\n');
+                        fs.writeFileSync('./files/'+ Date.now() + '_' + i +'.txt', withDelimiter);
+                    })
+                }
+            }
+        });
     }
 }
 
