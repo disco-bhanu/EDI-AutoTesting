@@ -10,40 +10,43 @@ class Generate {
     }
 
     async process(req, res) {
-        let spec = '';
-        const getFileId = await FileIDModel.findOne({'test_id': req.cookies.testID, 'file_type': 'pdf'}, {'file_id': 1, _id: 0});
+        
+        const getFileId = await FileIDModel.find({'test_id': req.cookies.testID, 'file_type': { $ne: 'txo'}}, {'file_id': 1, _id: 0});
+        console.log(getFileId);
         const conn = mongooseClient.conn;
         const bucket = new mongoose.mongo.GridFSBucket(conn.db, {bucketName: 'edi_test_inputs'});
-        console.log(getFileId.file_id);
-        bucket.openDownloadStream(mongoose.Types.ObjectId(getFileId.file_id))
-            .on('data', data => {
-                spec = spec + data.toString();
-            })
-            .on('end', () => {
-                let specJSON = JSON.parse(spec);
-                specJSON.forEach(segment => {
-                    segment.list.forEach(field => {
-                        if(field.required === 'M') {
-                            console.log(field.name);
-                            const TestCases = new TestCasesModel({
-                                test_id: req.cookies.testID,
-                                testcase_id: field.testID,
-                                test_data: ''
-                            })
-                        }
-                    })
-                })
-            })
-            .on('error', err => console.log(err));
+
+        var spec = new Promise((resolve, reject) => {
+            let specFile = '';
+            bucket.openDownloadStream(mongoose.Types.ObjectId(getFileId[0].file_id))
+                .on('data', data => specFile = specFile + data.toString())
+                .on('end', () => resolve(JSON.parse(specFile)))
+                .on('error', err => reject(err));
+        })
+
+        var data = new Promise((resolve, reject) => {
+            let dataFile = '';
+            bucket.openDownloadStream(mongoose.Types.ObjectId(getFileId[1].file_id))
+                .on('data', data => dataFile = dataFile + data.toString())
+                .on('end', () => resolve(dataFile))
+                .on('error', err => reject(err));
+        })
+
+        Promise.all([spec, data]).then(d => {
+            this.testCases(d[0], d[1]);
+            console.log(d);
+        })
+
         res.json({'message': 'Good'});        
     }
 
-    testCases() {
-        let data;
-        data = fs.readFileSync('../sampleData.txt');
+    async testCases(specJSON, dataFile) {
+        let data = dataFile;
+        //data = fs.readFileSync('../sampleData.txt');
+
         let split = data.toString().split('\r\n').join('').split("~");
         let splitData = split.reduce( (a, c) => [...a, c.split("*")], []);
-        fs.writeFileSync('./splitdata.txt', JSON.stringify(splitData, undefined, 2));
+        //fs.writeFileSync('./splitdata.txt', JSON.stringify(splitData, undefined, 2));
         //console.log(split.reverse());
 
         splitData.forEach( (s, i, a) => {

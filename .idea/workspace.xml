@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="63fec4f9-533a-4eb4-8e53-292bfa3f4985" name="Default Changelist" comment="" />
+    <list default="true" id="63fec4f9-533a-4eb4-8e53-292bfa3f4985" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/generateTestCases.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/generateTestCases.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/edi.json" beforeDir="false" afterPath="$PROJECT_DIR$/edi.json" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -13,30 +17,39 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controller/testCases.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="188">
-              <caret line="24" column="51" selection-start-line="24" selection-start-column="51" selection-end-line="24" selection-end-column="51" />
+            <state>
+              <caret line="24" column="39" selection-start-line="24" selection-start-column="39" selection-end-line="24" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/controller/generateTestCases.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="648">
+              <caret line="27" column="30" selection-start-line="27" selection-start-column="30" selection-end-line="27" selection-end-column="30" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controller/generateTestCases.js">
+        <entry file="file://$PROJECT_DIR$/model/fileIDModel.js">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/model/fileModel.js">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controller/processfiles.js">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/pdfToJSON.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2496">
-              <caret line="104" column="70" selection-start-line="104" selection-start-column="36" selection-end-line="104" selection-end-column="70" />
+            <state>
+              <caret line="5" column="16" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -65,7 +78,6 @@
         <option value="$PROJECT_DIR$/server/mongoDB.js" />
         <option value="$PROJECT_DIR$/controller/processfiles.js" />
         <option value="$PROJECT_DIR$/server/mongooseDB.js" />
-        <option value="$PROJECT_DIR$/controller/generateTestCases.js" />
         <option value="$PROJECT_DIR$/server/pdfToJSON.js" />
         <option value="$PROJECT_DIR$/new.json" />
         <option value="$PROJECT_DIR$/sampleData.txt" />
@@ -75,6 +87,7 @@
         <option value="$PROJECT_DIR$/controller/files/1556043191942.txt" />
         <option value="$PROJECT_DIR$/controller/files/1556043191946.txt" />
         <option value="$PROJECT_DIR$/controller/testCases.js" />
+        <option value="$PROJECT_DIR$/controller/generateTestCases.js" />
       </list>
     </option>
   </component>
@@ -101,7 +114,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -117,17 +129,24 @@
             <path>
               <item name="EDI_Testing" type="b2602c69:ProjectViewProjectNode" />
               <item name="EDI_Testing" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="EDI_Testing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="EDI_Testing" type="462c0819:PsiDirectoryNode" />
               <item name="server" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../Projects/B2BTools/info-base-ui" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Angular/RESTAPI7" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -177,6 +196,9 @@
       <workItem from="1555944056257" duration="29927000" />
       <workItem from="1556155588019" duration="2776000" />
       <workItem from="1556305917308" duration="2236000" />
+      <workItem from="1556545968764" duration="4876000" />
+      <workItem from="1556804149145" duration="138000" />
+      <workItem from="1556813125089" duration="62000" />
     </task>
     <task id="LOCAL-00001" summary="Looping">
       <created>1555624170231</created>
@@ -217,7 +239,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60107000" />
+    <option name="totallyTimeSpent" value="65183000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -229,9 +251,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
+    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16696805" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16656111" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -243,7 +265,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3286908" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="8" visible="true" weight="0.21029083" />
+      <window_info anchor="bottom" id="Version Control" order="8" visible="true" weight="0.15860215" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.14653243" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.32795697" />
@@ -300,9 +322,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="Looping" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/controller/files/1556044549293_8.txt" />
-    <entry file="file://$PROJECT_DIR$/controller/files/1556044549297_8.txt" />
-    <entry file="file://$PROJECT_DIR$/controller/files/1556044549261_3.txt" />
     <entry file="file://$PROJECT_DIR$/edi.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="993">
@@ -360,53 +379,52 @@
     <entry file="file://$PROJECT_DIR$/controller/files/1556074727000_3.txt" />
     <entry file="file://$PROJECT_DIR$/controller/files/1556074727003_4.txt" />
     <entry file="file://$PROJECT_DIR$/controller/files/1556074727005_4.txt" />
-    <entry file="file://$PROJECT_DIR$/controller/files/1556074873305_3.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controller/files/1556074873314_3.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controller/files/1556074873319_3.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controller/files/1556074873323_4.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controller/files/1556074873327_4.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controller/files/1556074873330_7.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controller/files/1556074873334_7.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controller/files/1556074873337_8.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controller/files/1556074873340_8.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controller/files/1556074873298_3.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controller/processfiles.js">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/controller/files/1556074873305_3.txt" />
+    <entry file="file://$PROJECT_DIR$/controller/files/1556074873314_3.txt" />
+    <entry file="file://$PROJECT_DIR$/controller/files/1556074873319_3.txt" />
+    <entry file="file://$PROJECT_DIR$/controller/files/1556074873323_4.txt" />
+    <entry file="file://$PROJECT_DIR$/controller/files/1556074873327_4.txt" />
+    <entry file="file://$PROJECT_DIR$/controller/files/1556074873330_7.txt" />
+    <entry file="file://$PROJECT_DIR$/controller/files/1556074873334_7.txt" />
+    <entry file="file://$PROJECT_DIR$/controller/files/1556074873337_8.txt" />
+    <entry file="file://$PROJECT_DIR$/controller/files/1556074873340_8.txt" />
+    <entry file="file://$PROJECT_DIR$/controller/files/1556074873298_3.txt" />
+    <entry file="file://$PROJECT_DIR$/server/mongooseDB.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-432" />
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/server/pdfToJSON.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2496">
+        <state relative-caret-position="1514">
           <caret line="104" column="70" selection-start-line="104" selection-start-column="36" selection-end-line="104" selection-end-column="70" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controller/generateTestCases.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/controller/testCases.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="24" column="51" selection-start-line="24" selection-start-column="51" selection-end-line="24" selection-end-column="51" />
+        <state>
+          <caret line="24" column="39" selection-start-line="24" selection-start-column="39" selection-end-line="24" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/fileIDModel.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/fileModel.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/processfiles.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="5" column="16" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/generateTestCases.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="648">
+          <caret line="27" column="30" selection-start-line="27" selection-start-column="30" selection-end-line="27" selection-end-column="30" />
         </state>
       </provider>
     </entry>

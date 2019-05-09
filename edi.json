@@ -1,265 +1,5 @@
 [
   {
-    "name": "ISA",
-    "description": "Interchange Control Header",
-    "max": "1",
-    "required": true,
-    "loop": "N/A",
-    "loopID": null,
-    "list": [
-      {
-        "name": "ISA01",
-        "id": "I01",
-        "desc": "Authorization Information Qualifier",
-        "required": "M",
-        "datatype": "ID",
-        "limit": "2/2",
-        "testID": "81e26da0-368b-431e-9ff2-e20a7ed2b40d",
-        "other": "All valid standard codes are used. (Total Codes: 7)"
-      },
-      {
-        "name": "ISA02",
-        "id": "I02",
-        "desc": "Authorization Information",
-        "required": "M",
-        "datatype": "AN",
-        "limit": "10/10",
-        "testID": "f5397803-37e4-4c80-86cc-fb052ae6935f",
-        "other": "Authorization Information Qualifier (I01)"
-      },
-      {
-        "name": "ISA03",
-        "id": "I03",
-        "desc": "Security Information Qualifier",
-        "required": "M",
-        "datatype": "ID",
-        "limit": "2/2",
-        "testID": "168a7b9b-52ba-45fb-8914-ac6da24ac7de",
-        "other": "All valid standard codes are used. (Total Codes: 2)"
-      },
-      {
-        "name": "ISA04",
-        "id": "I04",
-        "desc": "Security Information",
-        "required": "M",
-        "datatype": "AN",
-        "limit": "10/10",
-        "testID": "f7757308-fce8-487f-96a7-54c96f0da5b5",
-        "other": "Information Qualifier (I03)"
-      },
-      {
-        "name": "ISA05",
-        "id": "I05",
-        "desc": "Interchange ID Qualifier",
-        "required": "M",
-        "datatype": "ID",
-        "limit": "2/2",
-        "testID": "39f5780a-53aa-497f-b3e6-5641b65c392c",
-        "other": "All valid standard codes are used. (Total Codes: 41)"
-      },
-      {
-        "name": "ISA06",
-        "id": "I06",
-        "desc": "Interchange Sender ID",
-        "required": "M",
-        "datatype": "AN",
-        "limit": "15/15",
-        "testID": "1bf61e09-de29-4365-8731-aff5f8588c52",
-        "other": "element"
-      },
-      {
-        "name": "ISA07",
-        "id": "I05",
-        "desc": "Interchange ID Qualifier",
-        "required": "M",
-        "datatype": "ID",
-        "limit": "2/2",
-        "testID": "58d7ecbb-c89e-431a-8018-27c982a285e4",
-        "other": "All valid standard codes are used. (Total Codes: 41)"
-      },
-      {
-        "name": "ISA08",
-        "id": "I07",
-        "desc": "Interchange Receiver ID",
-        "required": "M",
-        "datatype": "AN",
-        "limit": "15/15",
-        "testID": "06d663b0-235c-47e1-b12d-65e08ea5228c",
-        "other": "receiving ID to route data to them"
-      },
-      {
-        "name": "ISA09",
-        "id": "I08",
-        "desc": "Interchange Date",
-        "required": "M",
-        "datatype": "DT",
-        "limit": "6/6",
-        "testID": "10dff6fa-7f48-40c1-80ce-99545783146c",
-        "other": "Date of the interchange"
-      },
-      {
-        "name": "ISA10",
-        "id": "I09",
-        "desc": "Interchange Time",
-        "required": "M",
-        "datatype": "TM",
-        "limit": "4/4",
-        "testID": "00b4c331-9e50-49fd-9547-dc9fb99541d9",
-        "other": "Time of the interchange"
-      },
-      {
-        "name": "ISA11",
-        "id": "I65",
-        "desc": "Repetition Separator",
-        "required": "M",
-        "datatype": "NA",
-        "limit": "NA",
-        "testID": "c5bc1a00-b247-412e-897b-d63d7f644977",
-        "other": "data element separator, component element separator, and the segment terminator"
-      },
-      {
-        "name": "ISA12",
-        "id": "I11",
-        "desc": "Interchange Control Version Number",
-        "required": "M",
-        "datatype": "ID",
-        "limit": "5/5",
-        "testID": "a8733d1c-375a-4f76-9d01-7b9a5ab321b2",
-        "other": "All valid standard codes are used. (Total Codes: 18)"
-      },
-      {
-        "name": "ISA13",
-        "id": "I12",
-        "desc": "Interchange Control Number",
-        "required": "M",
-        "datatype": "N0",
-        "limit": "9/9",
-        "testID": "ce088022-cfdb-4dfd-b2a0-fa8878e44cf4",
-        "other": "A control number assigned by the interchange sender"
-      },
-      {
-        "name": "ISA14",
-        "id": "I13",
-        "desc": "Acknowledgment Requested",
-        "required": "M",
-        "datatype": "ID",
-        "limit": "1/1",
-        "testID": "7cfc0f0a-ce60-4d56-9270-7c349db99262",
-        "other": "No Interchange Acknowledgment Requested"
-      },
-      {
-        "name": "ISA15",
-        "id": "I14",
-        "desc": "Interchange Usage Indicator",
-        "required": "M",
-        "datatype": "ID",
-        "limit": "1/1",
-        "testID": "4a503a0b-14f1-46ee-9acc-f456d9529363",
-        "other": "Production Data"
-      },
-      {
-        "name": "ISA16",
-        "id": "I15",
-        "desc": "Component Element Separator",
-        "required": "M",
-        "datatype": "NA",
-        "limit": "NA",
-        "testID": "513844e1-161a-49cd-ba2f-745ec3b16068",
-        "other": "element separator and the segment terminator"
-      }
-    ]
-  },
-  {
-    "name": "GS",
-    "description": "Functional Group Header",
-    "max": "1",
-    "required": true,
-    "loop": "N/A",
-    "loopID": null,
-    "list": [
-      {
-        "name": "GS01",
-        "id": "479",
-        "desc": "Functional Identifier Code",
-        "required": "M",
-        "datatype": "ID",
-        "limit": "2/2",
-        "testID": "844ed538-0e36-4b2d-b943-e8151b1cec17",
-        "other": "Ship Notice/Manifest (856)"
-      },
-      {
-        "name": "GS02",
-        "id": "142",
-        "desc": "Application Sender's Code",
-        "required": "M",
-        "datatype": "AN",
-        "limit": "2/15",
-        "testID": "0e475be6-a318-4ce7-b86d-7bcf95cfe830",
-        "other": "partners"
-      },
-      {
-        "name": "GS03",
-        "id": "124",
-        "desc": "Application Receiver's Code",
-        "required": "M",
-        "datatype": "AN",
-        "limit": "2/15",
-        "testID": "dcd2dec4-2819-48ee-a9c6-ec8b6dd49bcc",
-        "other": "partners"
-      },
-      {
-        "name": "GS04",
-        "id": "373",
-        "desc": "Date",
-        "required": "M",
-        "datatype": "DT",
-        "limit": "8/8",
-        "testID": "9a818bcc-a886-48bd-84f7-d8383dfe2425",
-        "other": "the calendar year"
-      },
-      {
-        "name": "GS05",
-        "id": "337",
-        "desc": "Time",
-        "required": "M",
-        "datatype": "TM",
-        "limit": "4/8",
-        "testID": "f867fe12-1dee-446a-8c99-641dce4538e1",
-        "other": "%3D tenths (0-9) and DD %3D hundredths (00-99)"
-      },
-      {
-        "name": "GS06",
-        "id": "28",
-        "desc": "Group Control Number",
-        "required": "M",
-        "datatype": "N0",
-        "limit": "1/9",
-        "testID": "ca35bc6a-0c1e-46cd-8f17-546ac15f5bde",
-        "other": "Assigned number originated and maintained by the sender"
-      },
-      {
-        "name": "GS07",
-        "id": "455",
-        "desc": "Responsible Agency Code",
-        "required": "M",
-        "datatype": "ID",
-        "limit": "1/2",
-        "testID": "4acc63b7-6131-4cfc-8dee-8d9dbbf837a7",
-        "other": "All valid standard codes are used. (Total Codes: 2)"
-      },
-      {
-        "name": "GS08",
-        "id": "480",
-        "desc": "Version / Release / Industry Identifier",
-        "required": "NA",
-        "datatype": "NA",
-        "limit": "NA",
-        "testID": "14b41d49-a165-424f-9a99-b57488fab29a",
-        "other": "similar transaction sets enclosed by a functional group header and a functional group trailer."
-      }
-    ]
-  },
-  {
     "name": "ST",
     "description": "Transaction Set Header",
     "max": "1",
@@ -274,8 +14,8 @@
         "required": "M",
         "datatype": "ID",
         "limit": "3/3",
-        "testID": "0d2ea595-5361-4f04-8507-407ff991b21e",
-        "other": "Ship Notice/Manifest"
+        "testID": "70b0544e-e6eb-4cd4-88d1-a6e976e44741",
+        "other": "All valid standard codes are used. (Total Codes: 298)"
       },
       {
         "name": "ST02",
@@ -284,8 +24,8 @@
         "required": "M",
         "datatype": "AN",
         "limit": "4/9",
-        "testID": "01225354-c3e8-4a2f-849f-dfb4d7f7ad35",
-        "other": "specified in the GS08. "
+        "testID": "da53762d-efb4-4508-9966-23199b258a7d",
+        "other": "appropriate transaction set definition (e.g., 810 selects the Invoice Transaction Set)."
       }
     ]
   },
@@ -304,8 +44,8 @@
         "required": "M",
         "datatype": "ID",
         "limit": "2/2",
-        "testID": "149de5cc-9124-4a1c-87ba-24616ec0c124",
-        "other": "All valid standard codes are used. (Total Codes: 66)"
+        "testID": "e957131a-e587-4c0b-b88c-6de0e6209a83",
+        "other": "All valid standard codes are used. (Total Codes: 65)"
       },
       {
         "name": "BSN02",
@@ -314,8 +54,8 @@
         "required": "M",
         "datatype": "AN",
         "limit": "2/30",
-        "testID": "31d82bb6-31ae-48c9-882a-0b90e73357dc",
-        "other": "associated with the corresponding invoice."
+        "testID": "7f6eafaa-a011-4126-b1b7-9130f534ee4e",
+        "other": "specific shipment"
       },
       {
         "name": "BSN03",
@@ -324,8 +64,8 @@
         "required": "M",
         "datatype": "DT",
         "limit": "8/8",
-        "testID": "cac3bb79-d740-4013-aa17-a3c010617d5b",
-        "other": "Transaction create date"
+        "testID": "6779086b-f41d-4fb8-a30c-313b5f29a6b2",
+        "other": "Date expressed as CCYYMMDD"
       },
       {
         "name": "BSN04",
@@ -334,8 +74,38 @@
         "required": "M",
         "datatype": "TM",
         "limit": "4/8",
-        "testID": "b9fa09c0-64f7-4587-9b0a-5bd49dfe8634",
-        "other": "BSN06 and BSN07 differentiate the functionality of use for the transaction set. "
+        "testID": "245063b8-0580-4215-8509-1c5b23f6b929",
+        "other": "%3D tenths (0-9) and DD %3D hundredths (00-99)"
+      },
+      {
+        "name": "BSN05",
+        "id": "1005",
+        "desc": "Hierarchical Structure Code",
+        "required": "O",
+        "datatype": "ID",
+        "limit": "4/4",
+        "testID": "2336a6df-406c-4b9a-9fde-95182a3cc737",
+        "other": "All valid standard codes are used. (Total Codes: 61)"
+      },
+      {
+        "name": "BSN06",
+        "id": "640",
+        "desc": "Transaction Type Code",
+        "required": "X",
+        "datatype": "ID",
+        "limit": "2/2",
+        "testID": "5608bc8b-5db8-48c0-8bde-8a93b0e23934",
+        "other": "All valid standard codes are used. (Total Codes: 446)"
+      },
+      {
+        "name": "BSN07",
+        "id": "641",
+        "desc": "Status Reason Code",
+        "required": "O",
+        "datatype": "ID",
+        "limit": "3/3",
+        "testID": "83656238-fd4e-43bc-a8dd-ad1efbb52aa6",
+        "other": "BSN06 and BSN07 differentiate the functionality of use for the transaction set."
       }
     ]
   },
@@ -345,7 +115,7 @@
     "max": "1",
     "required": true,
     "loop": "HL",
-    "loopID": null,
+    "loopID": "67245d59-d2f3-45ec-a829-19615fbfe8af",
     "list": [
       {
         "name": "HL01",
@@ -354,8 +124,8 @@
         "required": "M",
         "datatype": "AN",
         "limit": "1/12",
-        "testID": "32c1a6a0-5af0-43c7-a7b1-a074c4347f66",
-        "other": "segment in a hierarchical structure "
+        "testID": "0d08ab6e-083f-4084-8ce4-8a715ba923d7",
+        "other": "segment in a hierarchical structure"
       },
       {
         "name": "HL02",
@@ -364,8 +134,8 @@
         "required": "O",
         "datatype": "AN",
         "limit": "1/12",
-        "testID": "088ea2b2-79c0-4356-b44a-48fe5d418cf3",
-        "other": "data segment being described is subordinate to "
+        "testID": "f51c7f8e-7913-473d-b367-8b43792e2c53",
+        "other": "data segment being described is subordinate to"
       },
       {
         "name": "HL03",
@@ -374,8 +144,8 @@
         "required": "M",
         "datatype": "ID",
         "limit": "1/2",
-        "testID": "998036aa-807d-4ce3-9f34-5e4d1d2e3ef5",
-        "other": "segment. "
+        "testID": "d44a32bd-9bd1-47cc-bd19-384b855157e2",
+        "other": "segment."
       }
     ]
   },
@@ -383,9 +153,9 @@
     "name": "TD1",
     "description": "Carrier Details (Quantity and Weight)",
     "max": "20",
-    "required": false,
+    "required": true,
     "loop": "HL",
-    "loopID": null,
+    "loopID": "67245d59-d2f3-45ec-a829-19615fbfe8af",
     "list": [
       {
         "name": "TD101",
@@ -394,8 +164,8 @@
         "required": "O",
         "datatype": "AN",
         "limit": "3/5",
-        "testID": "a193f592-08a6-4bef-8c56-90441124e64c",
-        "other": "All valid standard codes are used. (Total Codes: 212)"
+        "testID": "f31e6ffb-2049-4724-8c9a-1fa357a1955a",
+        "other": "All valid standard codes are used. (Total Codes: 203)"
       },
       {
         "name": "TD102",
@@ -404,8 +174,8 @@
         "required": "X",
         "datatype": "N0",
         "limit": "1/7",
-        "testID": "b3c47d2c-11b5-4aaf-a50a-4ed9b7c2d58c",
-        "other": "Number of units (pieces) of the lading commodity "
+        "testID": "891f3141-d784-4472-98e7-4cae9cfe9c4f",
+        "other": "Number of units (pieces) of the lading commodity"
       },
       {
         "name": "TD106",
@@ -414,8 +184,8 @@
         "required": "O",
         "datatype": "ID",
         "limit": "1/2",
-        "testID": "4e3354bc-0bca-4f7d-b94b-efb8ec149e2e",
-        "other": "All valid standard codes are used. (Total Codes: 52)"
+        "testID": "bcb3f175-380d-45df-9070-3ca39e0b260a",
+        "other": "All valid standard codes are used. (Total Codes: 51)"
       },
       {
         "name": "TD107",
@@ -424,8 +194,8 @@
         "required": "X",
         "datatype": "R",
         "limit": "1/10",
-        "testID": "5df3a340-153f-4681-b3a4-6b17d55c0592",
-        "other": "Numeric value of weight "
+        "testID": "2e6a6073-63f5-4c65-b584-82f3c9e50b47",
+        "other": "Numeric value of weight"
       },
       {
         "name": "TD108",
@@ -434,7 +204,7 @@
         "required": "X",
         "datatype": "ID",
         "limit": "2/2",
-        "testID": "851a3c62-f557-4530-b3bc-95d63469f6a5",
+        "testID": "6ae4558a-f3c0-4de6-b037-a997dd424213",
         "other": "P0910 - If either TD109 or TD110 is present, then the other is required."
       }
     ]
@@ -445,17 +215,17 @@
     "max": "12",
     "required": false,
     "loop": "HL",
-    "loopID": null,
+    "loopID": "67245d59-d2f3-45ec-a829-19615fbfe8af",
     "list": [
       {
         "name": "TD502",
         "id": "66",
         "desc": "Identification Code Qualifier",
-        "required": "O",
+        "required": "X",
         "datatype": "ID",
         "limit": "1/2",
-        "testID": "224ba0d3-eb61-45ea-9d87-a140e1015581",
-        "other": "All valid standard codes are used. (Total Codes: 240)"
+        "testID": "1381f940-568c-41e8-bbd2-8f96c7be02e3",
+        "other": "All valid standard codes are used. (Total Codes: 215)"
       },
       {
         "name": "TD503",
@@ -464,28 +234,38 @@
         "required": "X",
         "datatype": "AN",
         "limit": "2/80",
-        "testID": "e1dcd624-5a6b-4401-84c0-21bbdfc819d0",
-        "other": "Association"
+        "testID": "b8232f4f-1403-47ac-9776-52d6cfaa4232",
+        "other": "Code identifying a party or other code"
       },
       {
         "name": "TD505",
         "id": "387",
         "desc": "Routing",
-        "required": "O",
+        "required": "X",
         "datatype": "AN",
         "limit": "1/35",
-        "testID": "c208f26c-7f44-4de9-8b9e-342ee600d107",
-        "other": "TD503 to identify the actual routing sequence, specified by the party identified in TD502. "
+        "testID": "2babd40d-920f-4c17-ad9a-2c0566dc6e8d",
+        "other": "originating carrier's identity"
+      },
+      {
+        "name": "TD506",
+        "id": "368",
+        "desc": "Shipment/Order Status Code",
+        "required": "X",
+        "datatype": "ID",
+        "limit": "2/2",
+        "testID": "801fb258-e49a-46d8-8ba3-a85ca7f29f2d",
+        "other": "TD503 to identify the actual routing sequence, specified by the party identified in TD502."
       }
     ]
   },
   {
     "name": "REF",
-    "description": "Reference Information",
+    "description": "Reference Identification",
     "max": ">1",
     "required": false,
     "loop": "HL",
-    "loopID": null,
+    "loopID": "67245d59-d2f3-45ec-a829-19615fbfe8af",
     "list": [
       {
         "name": "REF01",
@@ -494,18 +274,18 @@
         "required": "M",
         "datatype": "ID",
         "limit": "2/3",
-        "testID": "318314f5-1437-4659-b7f0-10fadb591fb6",
+        "testID": "7b0be63c-f05f-462b-bcea-f2afd5db9f6d",
         "other": "Carrier's Reference Number (PRO/Invoice)"
       },
       {
         "name": "REF02",
         "id": "127",
         "desc": "Reference Identification",
-        "required": " C ",
+        "required": "X",
         "datatype": "AN",
-        "limit": "1/50",
-        "testID": "a39dfbd8-44a4-4729-ad34-937d4393f560",
-        "other": "REF04 contains data relating to the value cited in REF02. "
+        "limit": "1/30",
+        "testID": "734a1c6a-e45a-43e5-a4eb-adc6cb2d8a5a",
+        "other": "REF04 contains data relating to the value cited in REF02."
       }
     ]
   },
@@ -515,7 +295,7 @@
     "max": "10",
     "required": false,
     "loop": "HL",
-    "loopID": null,
+    "loopID": "67245d59-d2f3-45ec-a829-19615fbfe8af",
     "list": [
       {
         "name": "DTM01",
@@ -524,7 +304,7 @@
         "required": "M",
         "datatype": "ID",
         "limit": "3/3",
-        "testID": "fe81476c-eebf-4e56-a224-019f1d9e77ac",
+        "testID": "71651f43-143a-46f8-8bdd-abc4edfe5d40",
         "other": "Shipped"
       },
       {
@@ -534,18 +314,18 @@
         "required": "X",
         "datatype": "DT",
         "limit": "8/8",
-        "testID": "217ca135-9d23-421c-bee5-f178330e1004",
+        "testID": "ac2ea689-75b4-44bb-b3d8-157ed69bb5bb",
         "other": "P0506 - If either DTM05 or DTM06 is present, then the other is required."
       }
     ]
   },
   {
     "name": "N1",
-    "description": "Party Identification",
+    "description": "Name",
     "max": "1",
     "required": false,
     "loop": "N1",
-    "loopID": null,
+    "loopID": "ae68322e-1958-4ffe-9e3e-71d6560a903d",
     "list": [
       {
         "name": "N101",
@@ -554,18 +334,18 @@
         "required": "M",
         "datatype": "ID",
         "limit": "2/3",
-        "testID": "6e30007e-9d10-404b-adb1-79f48644ac00",
+        "testID": "26e9c962-ff9e-4c9f-8dfa-8e469346144f",
         "other": "Ordered By"
       },
       {
         "name": "N102",
         "id": "93",
         "desc": "Name",
-        "required": "O",
+        "required": "X",
         "datatype": "AN",
         "limit": "1/60",
-        "testID": "830fbdb5-e5c2-41f7-bcfd-900cbe505f59",
-        "other": "Free-form name "
+        "testID": "0151d256-5a2c-4168-b595-6f54e7d6d592",
+        "other": "Free-form name"
       },
       {
         "name": "N103",
@@ -574,8 +354,8 @@
         "required": "X",
         "datatype": "ID",
         "limit": "1/2",
-        "testID": "e36b0a2e-6d04-4b89-a8a9-850e798b4383",
-        "other": "Assigned by Buyer or Buyer's Agent"
+        "testID": "1509337f-4fab-475e-8600-407adf8dac1b",
+        "other": "All valid standard codes are used. (Total Codes: 215)"
       },
       {
         "name": "N104",
@@ -584,18 +364,18 @@
         "required": "X",
         "datatype": "AN",
         "limit": "2/80",
-        "testID": "440fc071-6922-4618-a101-858c9decfc57",
-        "other": "N105 and N106 further define the type of entity in N101. "
+        "testID": "d4a1b3ba-b109-4e9d-b788-0ac651eb4612",
+        "other": "N105 and N106 further define the type of entity in N101."
       }
     ]
   },
   {
     "name": "N3",
-    "description": "Party Location",
+    "description": "Address Information",
     "max": "2",
     "required": false,
     "loop": "N1",
-    "loopID": null,
+    "loopID": "ae68322e-1958-4ffe-9e3e-71d6560a903d",
     "list": [
       {
         "name": "N301",
@@ -604,8 +384,8 @@
         "required": "M",
         "datatype": "AN",
         "limit": "1/55",
-        "testID": "5ce32ec0-ac07-4d22-bffc-4b3e161c6ce7",
-        "other": "Address information "
+        "testID": "2de83900-d949-4184-a017-9fad803f2646",
+        "other": "Address information"
       },
       {
         "name": "N302",
@@ -614,8 +394,8 @@
         "required": "O",
         "datatype": "AN",
         "limit": "1/55",
-        "testID": "db3b45e1-6010-46cd-8684-4077e47b4bbe",
-        "other": "Address information "
+        "testID": "f1c16ca2-004c-45f5-971b-02ae6d2ad392",
+        "other": "Address information"
       }
     ]
   },
@@ -625,7 +405,7 @@
     "max": "1",
     "required": false,
     "loop": "N1",
-    "loopID": null,
+    "loopID": "ae68322e-1958-4ffe-9e3e-71d6560a903d",
     "list": [
       {
         "name": "N401",
@@ -634,18 +414,18 @@
         "required": "O",
         "datatype": "AN",
         "limit": "2/30",
-        "testID": "6e273717-57ad-4ba6-8d16-f5f8907a3aaa",
-        "other": "Free-form text for city name "
+        "testID": "053f950e-e6f5-4294-b904-3af37bbfe492",
+        "other": "Free-form text for city name"
       },
       {
         "name": "N402",
         "id": "156",
         "desc": "State or Province Code",
-        "required": "X",
+        "required": "O",
         "datatype": "ID",
         "limit": "2/2",
-        "testID": "66248077-8478-479c-aeab-8b54d33dcdc5",
-        "other": "agency "
+        "testID": "0877ae18-edeb-447a-b784-85ad54e17119",
+        "other": "agency"
       },
       {
         "name": "N403",
@@ -654,8 +434,8 @@
         "required": "O",
         "datatype": "ID",
         "limit": "3/15",
-        "testID": "1488a2e8-adc3-481b-8350-7d1d13b1a4d1",
-        "other": "blanks (zip code for United States) "
+        "testID": "39821389-8021-42af-9ed4-ec9dd87532e1",
+        "other": "blanks (zip code for United States)"
       },
       {
         "name": "N404",
@@ -664,8 +444,8 @@
         "required": "O",
         "datatype": "ID",
         "limit": "2/3",
-        "testID": "c8ea45f5-4399-4ffe-ac4c-eb4b698dcf89",
-        "other": "Code identifying the country "
+        "testID": "7d657fb6-1bbf-40a0-ae59-8c5618ce61ea",
+        "other": "Code identifying the country"
       },
       {
         "name": "N405",
@@ -674,8 +454,8 @@
         "required": "X",
         "datatype": "ID",
         "limit": "1/2",
-        "testID": "476d8de0-a23a-4fdb-9851-a1d837b34736",
-        "other": "All valid standard codes are used. (Total Codes: 184)"
+        "testID": "8161c374-3c1b-4677-bf86-659abd54bc7e",
+        "other": "All valid standard codes are used. (Total Codes: 172)"
       },
       {
         "name": "N406",
@@ -684,18 +464,18 @@
         "required": "O",
         "datatype": "AN",
         "limit": "1/30",
-        "testID": "33b0c720-90d6-44ce-8f5d-4bda51b4de92",
-        "other": "N402 is required only if city name (N401) is in the U.S. or Canada. "
+        "testID": "eebaa2f0-aab3-4186-abc6-1003df6759cd",
+        "other": "N402 is required only if city name (N401) is in the U.S. or Canada."
       }
     ]
   },
   {
     "name": "N1",
-    "description": "Party Identification",
+    "description": "Name",
     "max": "1",
     "required": false,
     "loop": "N1",
-    "loopID": null,
+    "loopID": "41b898dd-ed04-4a1b-9270-95d827ea6955",
     "list": [
       {
         "name": "N101",
@@ -704,18 +484,18 @@
         "required": "M",
         "datatype": "ID",
         "limit": "2/3",
-        "testID": "537932fd-45fe-41ff-ba1d-c51c5742883e",
+        "testID": "f81d67c1-896a-432d-a62d-c823fdbdfdd8",
         "other": "Ship From"
       },
       {
         "name": "N102",
         "id": "93",
         "desc": "Name",
-        "required": "O",
+        "required": "X",
         "datatype": "AN",
         "limit": "1/60",
-        "testID": "e5711c0c-c0bc-48bb-be42-539c50826cb0",
-        "other": "Free-form name "
+        "testID": "8e556f6b-444e-4596-9d46-32e8244fe842",
+        "other": "Free-form name"
       },
       {
         "name": "N103",
@@ -724,8 +504,8 @@
         "required": "X",
         "datatype": "ID",
         "limit": "1/2",
-        "testID": "645e91ef-8f09-4e13-a3e2-32c6e8f0da01",
-        "other": "Assigned by Buyer or Buyer's Agent"
+        "testID": "bd1b9a18-6b1f-4867-9366-2b82f59d1410",
+        "other": "All valid standard codes are used. (Total Codes: 215)"
       },
       {
         "name": "N104",
@@ -734,18 +514,18 @@
         "required": "X",
         "datatype": "AN",
         "limit": "2/80",
-        "testID": "09af86b4-bc40-4740-8d1e-13087ed2db19",
-        "other": "N105 and N106 further define the type of entity in N101. "
+        "testID": "b3ac132a-b86d-428d-bd58-587d4cb69181",
+        "other": "N105 and N106 further define the type of entity in N101."
       }
     ]
   },
   {
     "name": "N3",
-    "description": "Party Location",
+    "description": "Address Information",
     "max": "2",
     "required": false,
     "loop": "N1",
-    "loopID": null,
+    "loopID": "41b898dd-ed04-4a1b-9270-95d827ea6955",
     "list": [
       {
         "name": "N301",
@@ -754,8 +534,8 @@
         "required": "M",
         "datatype": "AN",
         "limit": "1/55",
-        "testID": "a683b20c-d579-4260-9de1-d198fcc65668",
-        "other": "Address information "
+        "testID": "f1689e7a-ab62-4851-88ac-c3ba991c93c7",
+        "other": "Address information"
       },
       {
         "name": "N302",
@@ -764,8 +544,8 @@
         "required": "O",
         "datatype": "AN",
         "limit": "1/55",
-        "testID": "f15486c4-96de-443c-85b5-8242c98f411a",
-        "other": "Address information "
+        "testID": "f5de586b-be4e-44ba-90d1-8266601e1fc4",
+        "other": "Address information"
       }
     ]
   },
@@ -775,7 +555,7 @@
     "max": "1",
     "required": false,
     "loop": "N1",
-    "loopID": null,
+    "loopID": "41b898dd-ed04-4a1b-9270-95d827ea6955",
     "list": [
       {
         "name": "N401",
@@ -784,18 +564,18 @@
         "required": "O",
         "datatype": "AN",
         "limit": "2/30",
-        "testID": "72cab029-d228-40a5-825a-6a8220724de1",
-        "other": "Free-form text for city name "
+        "testID": "76e915f0-3a33-4fe4-877d-3ce18dd87534",
+        "other": "Free-form text for city name"
       },
       {
         "name": "N402",
         "id": "156",
         "desc": "State or Province Code",
-        "required": "X",
+        "required": "O",
         "datatype": "ID",
         "limit": "2/2",
-        "testID": "b2355478-5423-416b-8a5e-00c12bc177b7",
-        "other": "agency "
+        "testID": "8927dc38-e80d-438b-b62d-8a59a8a4cdf7",
+        "other": "agency"
       },
       {
         "name": "N403",
@@ -804,8 +584,8 @@
         "required": "O",
         "datatype": "ID",
         "limit": "3/15",
-        "testID": "dfb18b7b-47e6-43f6-ac2b-e5217c73fae4",
-        "other": "blanks (zip code for United States) "
+        "testID": "2550a66c-38cd-40e2-b012-1782ba5e2191",
+        "other": "blanks (zip code for United States)"
       },
       {
         "name": "N404",
@@ -814,18 +594,18 @@
         "required": "O",
         "datatype": "ID",
         "limit": "2/3",
-        "testID": "5a3e4d9a-0857-4531-827f-886cc3c3793d",
-        "other": "N402 is required only if city name (N401) is in the U.S. or Canada. "
+        "testID": "f74eb1fa-3cc8-4006-ad44-6c7603cb09cf",
+        "other": "N402 is required only if city name (N401) is in the U.S. or Canada."
       }
     ]
   },
   {
     "name": "N1",
-    "description": "Party Identification",
+    "description": "Name",
     "max": "1",
     "required": false,
     "loop": "N1",
-    "loopID": null,
+    "loopID": "de7b05d3-92ce-4647-b114-5616956bbde4",
     "list": [
       {
         "name": "N101",
@@ -834,18 +614,18 @@
         "required": "M",
         "datatype": "ID",
         "limit": "2/3",
-        "testID": "6cfa192e-4230-4b7b-b33d-d69361bb43b0",
+        "testID": "4bb1d3cb-2111-4ec5-b391-f2a3bef7e7a7",
         "other": "Shipper"
       },
       {
         "name": "N102",
         "id": "93",
         "desc": "Name",
-        "required": "O",
+        "required": "X",
         "datatype": "AN",
         "limit": "1/60",
-        "testID": "55b8ccce-096f-4d48-9eec-eb47cd7a384b",
-        "other": "Free-form name "
+        "testID": "2ef5985f-cfc2-4a46-9392-fb64d5aed372",
+        "other": "Free-form name"
       },
       {
         "name": "N103",
@@ -854,8 +634,8 @@
         "required": "X",
         "datatype": "ID",
         "limit": "1/2",
-        "testID": "611c3eed-e2c0-40fa-8a3c-2d995f1b5332",
-        "other": "Assigned by Buyer or Buyer's Agent"
+        "testID": "ac627334-e3bd-404c-a18f-b2e79bda4fe0",
+        "other": "All valid standard codes are used. (Total Codes: 215)"
       },
       {
         "name": "N104",
@@ -864,18 +644,18 @@
         "required": "X",
         "datatype": "AN",
         "limit": "2/80",
-        "testID": "22a690d1-fc79-44f5-a7ff-0085206a5a68",
-        "other": "N105 and N106 further define the type of entity in N101. "
+        "testID": "c16f5cbf-0228-45fb-b149-cf29f74d2c98",
+        "other": "N105 and N106 further define the type of entity in N101."
       }
     ]
   },
   {
     "name": "N3",
-    "description": "Party Location",
+    "description": "Address Information",
     "max": "2",
     "required": false,
     "loop": "N1",
-    "loopID": null,
+    "loopID": "de7b05d3-92ce-4647-b114-5616956bbde4",
     "list": [
       {
         "name": "N301",
@@ -884,8 +664,8 @@
         "required": "M",
         "datatype": "AN",
         "limit": "1/55",
-        "testID": "ebb23700-2cc0-4e7d-9587-824c65029599",
-        "other": "Address information "
+        "testID": "d1aa4e66-7da2-4f54-865e-4ea7ff765247",
+        "other": "Address information"
       },
       {
         "name": "N302",
@@ -894,8 +674,8 @@
         "required": "O",
         "datatype": "AN",
         "limit": "1/55",
-        "testID": "be8e0d7a-adcb-42b4-abf1-a9b892574758",
-        "other": "Address information "
+        "testID": "9eaccc79-c71d-4209-a2a5-150f63ca8f51",
+        "other": "Address information"
       }
     ]
   },
@@ -905,7 +685,7 @@
     "max": "1",
     "required": false,
     "loop": "N1",
-    "loopID": null,
+    "loopID": "de7b05d3-92ce-4647-b114-5616956bbde4",
     "list": [
       {
         "name": "N401",
@@ -914,18 +694,18 @@
         "required": "O",
         "datatype": "AN",
         "limit": "2/30",
-        "testID": "0540fdab-02da-40e1-861f-929c8e31c756",
-        "other": "Free-form text for city name "
+        "testID": "2c56f03f-f35d-4e5d-8774-86667086e86b",
+        "other": "Free-form text for city name"
       },
       {
         "name": "N402",
         "id": "156",
         "desc": "State or Province Code",
-        "required": "X",
+        "required": "O",
         "datatype": "ID",
         "limit": "2/2",
-        "testID": "651e94c1-dd5a-45ce-bcba-aee4f1ac5e46",
-        "other": "agency "
+        "testID": "6b38637a-b1d9-450d-b893-b69c82ef1ecf",
+        "other": "agency"
       },
       {
         "name": "N403",
@@ -934,8 +714,8 @@
         "required": "O",
         "datatype": "ID",
         "limit": "3/15",
-        "testID": "2b963ca7-ab51-4390-b7af-9b5d23c3b33d",
-        "other": "blanks (zip code for United States) "
+        "testID": "f48a59f8-2978-4aeb-9328-5b553322a2bc",
+        "other": "blanks (zip code for United States)"
       },
       {
         "name": "N404",
@@ -944,8 +724,8 @@
         "required": "O",
         "datatype": "ID",
         "limit": "2/3",
-        "testID": "56114b27-7336-4bfa-807e-4e8197993a30",
-        "other": "N402 is required only if city name (N401) is in the U.S. or Canada. "
+        "testID": "ca8b8f22-15f8-47a9-a9a2-db98f83610f5",
+        "other": "N402 is required only if city name (N401) is in the U.S. or Canada."
       }
     ]
   },
@@ -955,7 +735,7 @@
     "max": "1",
     "required": true,
     "loop": "HL",
-    "loopID": null,
+    "loopID": "6cd8be40-126e-45a6-a652-60fc6c4e8377",
     "list": [
       {
         "name": "HL01",
@@ -964,8 +744,8 @@
         "required": "M",
         "datatype": "AN",
         "limit": "1/12",
-        "testID": "2755078b-4f0f-4a94-9496-ff0e2465a996",
-        "other": "segment in a hierarchical structure "
+        "testID": "bb665535-7f20-42ff-8d00-de94ef742c17",
+        "other": "segment in a hierarchical structure"
       },
       {
         "name": "HL02",
@@ -974,8 +754,8 @@
         "required": "O",
         "datatype": "AN",
         "limit": "1/12",
-        "testID": "7062f00b-06e9-41d3-b4b6-fea2b7a9a4a4",
-        "other": "data segment being described is subordinate to "
+        "testID": "0eef6e89-59af-4849-a153-c778e3d2b3d3",
+        "other": "data segment being described is subordinate to"
       },
       {
         "name": "HL03",
@@ -984,8 +764,18 @@
         "required": "M",
         "datatype": "ID",
         "limit": "1/2",
-        "testID": "48bbbca4-8919-4fd8-b9a6-d2384d2238fe",
-        "other": "segment. "
+        "testID": "f58e1f17-2fe1-42fa-8986-3bbac4ad7964",
+        "other": "Order"
+      },
+      {
+        "name": "HL04",
+        "id": "736",
+        "desc": "Hierarchical Child Code",
+        "required": "O",
+        "datatype": "ID",
+        "limit": "1/1",
+        "testID": "1d16d5cc-627c-46e5-a51b-7ba88b7656b2",
+        "other": "segment."
       }
     ]
   },
@@ -995,7 +785,7 @@
     "max": "1",
     "required": false,
     "loop": "HL",
-    "loopID": null,
+    "loopID": "6cd8be40-126e-45a6-a652-60fc6c4e8377",
     "list": [
       {
         "name": "PRF01",
@@ -1004,8 +794,18 @@
         "required": "M",
         "datatype": "AN",
         "limit": "1/22",
-        "testID": "2c988d6d-79c9-463e-b21e-2c15577a220a",
-        "other": "PRF04 is the date assigned by the purchaser to purchase order. "
+        "testID": "a4c31fd5-03a3-4c8b-b753-db3700455a04",
+        "other": "Identifying number for Purchase Order assigned by the orderer/purchaser"
+      },
+      {
+        "name": "PRF04",
+        "id": "373",
+        "desc": "Date",
+        "required": "O",
+        "datatype": "DT",
+        "limit": "8/8",
+        "testID": "f8da62cb-93d8-4817-8299-f9f68406ffc1",
+        "other": "PRF04 is the date assigned by the purchaser to purchase order."
       }
     ]
   },
@@ -1015,7 +815,7 @@
     "max": "20",
     "required": false,
     "loop": "HL",
-    "loopID": null,
+    "loopID": "6cd8be40-126e-45a6-a652-60fc6c4e8377",
     "list": [
       {
         "name": "TD106",
@@ -1024,8 +824,8 @@
         "required": "O",
         "datatype": "ID",
         "limit": "1/2",
-        "testID": "b8e5768c-1ecd-4709-abdf-ddbf6f714f57",
-        "other": "All valid standard codes are used. (Total Codes: 52)"
+        "testID": "60b4436f-9394-4e9e-9556-649b684ca309",
+        "other": "All valid standard codes are used. (Total Codes: 51)"
       },
       {
         "name": "TD107",
@@ -1034,28 +834,28 @@
         "required": "X",
         "datatype": "R",
         "limit": "1/10",
-        "testID": "c2a06ada-2260-4e46-90b4-0b8187877994",
-        "other": "Numeric value of weight "
+        "testID": "60fd7d56-70f0-4933-a17f-e4607a1e1d38",
+        "other": "Numeric value of weight"
       },
       {
         "name": "TD108",
         "id": "355",
         "desc": "Unit or Basis for Measurement Code",
-        "required": "O",
+        "required": "X",
         "datatype": "ID",
         "limit": "2/2",
-        "testID": "7768b1c6-5cf8-4bf5-ba55-3cbadc48830f",
+        "testID": "e19ea275-2781-4b65-a0ef-de03e44f89fb",
         "other": "P0910 - If either TD109 or TD110 is present, then the other is required."
       }
     ]
   },
   {
     "name": "MAN",
-    "description": "Marks and Numbers Information",
+    "description": "Marks and Numbers",
     "max": ">1",
     "required": false,
     "loop": "HL",
-    "loopID": null,
+    "loopID": "6cd8be40-126e-45a6-a652-60fc6c4e8377",
     "list": [
       {
         "name": "MAN01",
@@ -1064,7 +864,7 @@
         "required": "M",
         "datatype": "ID",
         "limit": "1/2",
-        "testID": "33e00042-8e15-449a-8cea-3317fdbcd807",
+        "testID": "6e7bea50-5073-4748-8f53-26f233ae76a1",
         "other": "Carrier-Assigned Package ID Number"
       },
       {
@@ -1074,8 +874,8 @@
         "required": "M",
         "datatype": "AN",
         "limit": "1/48",
-        "testID": "c9941cfc-ddf4-420e-a7b4-e12653a61932",
-        "other": "1."
+        "testID": "7066c317-5602-4fae-bc3f-f2e5c238cdf4",
+        "other": "two ID numbers must be maintained."
       }
     ]
   },
@@ -1085,7 +885,7 @@
     "max": "1",
     "required": true,
     "loop": "HL",
-    "loopID": null,
+    "loopID": "8aa261fe-7081-43e8-bff0-247815a85106",
     "list": [
       {
         "name": "HL01",
@@ -1094,8 +894,8 @@
         "required": "M",
         "datatype": "AN",
         "limit": "1/12",
-        "testID": "44b91413-23df-448d-9d44-b3826406eec1",
-        "other": "segment in a hierarchical structure "
+        "testID": "630346e7-5207-493d-9713-eac1e5a4ffef",
+        "other": "segment in a hierarchical structure"
       },
       {
         "name": "HL02",
@@ -1104,8 +904,8 @@
         "required": "O",
         "datatype": "AN",
         "limit": "1/12",
-        "testID": "dd403500-fc1d-4ffd-8d7d-a52dddd25870",
-        "other": "data segment being described is subordinate to "
+        "testID": "36dcc28d-25ee-4d97-b10f-3f8ef7842472",
+        "other": "data segment being described is subordinate to"
       },
       {
         "name": "HL03",
@@ -1114,18 +914,28 @@
         "required": "M",
         "datatype": "ID",
         "limit": "1/2",
-        "testID": "d48e7ca4-e8e1-4e7e-9418-e2011f63fafd",
-        "other": "segment. "
+        "testID": "471522cb-48ce-4e0e-bbb2-178503fd438a",
+        "other": "Shipping Tare"
+      },
+      {
+        "name": "HL04",
+        "id": "736",
+        "desc": "Hierarchical Child Code",
+        "required": "O",
+        "datatype": "ID",
+        "limit": "1/1",
+        "testID": "ddd68b83-dd0a-4887-ba50-0b6a7d121235",
+        "other": "segment."
       }
     ]
   },
   {
     "name": "MAN",
-    "description": "Marks and Numbers Information",
+    "description": "Marks and Numbers",
     "max": ">1",
     "required": false,
     "loop": "HL",
-    "loopID": null,
+    "loopID": "8aa261fe-7081-43e8-bff0-247815a85106",
     "list": [
       {
         "name": "MAN01",
@@ -1134,7 +944,7 @@
         "required": "M",
         "datatype": "ID",
         "limit": "1/2",
-        "testID": "0f11c7b2-d8b3-4452-903b-52ac84c86223",
+        "testID": "0deef824-b1d3-49ea-abfd-f22b880ebae3",
         "other": "SSCC-18 and Application Identifier"
       },
       {
@@ -1144,8 +954,8 @@
         "required": "M",
         "datatype": "AN",
         "limit": "1/48",
-        "testID": "56459a36-515c-48fe-93a9-b634193d5e5f",
-        "other": "Package tracking numbers required for SCAC code %E2%80%9CFDEG%E2%80%9D and SCAC code beginning %E2%80%9CUPS%E2%80%9D"
+        "testID": "40fed135-1c99-4ddd-80db-e94970637a80",
+        "other": "two ID numbers must be maintained."
       }
     ]
   },
@@ -1155,7 +965,7 @@
     "max": "1",
     "required": true,
     "loop": "HL",
-    "loopID": null,
+    "loopID": "0ba6483b-1a54-4228-8371-6ab4db16f850",
     "list": [
       {
         "name": "HL01",
@@ -1164,8 +974,8 @@
         "required": "M",
         "datatype": "AN",
         "limit": "1/12",
-        "testID": "5da11e58-4c01-417b-9452-765e3a2e7d6e",
-        "other": "segment in a hierarchical structure "
+        "testID": "e2bfe9c7-220b-47b0-b78f-4a08dae2cc1b",
+        "other": "segment in a hierarchical structure"
       },
       {
         "name": "HL02",
@@ -1174,8 +984,8 @@
         "required": "O",
         "datatype": "AN",
         "limit": "1/12",
-        "testID": "e97d9911-8027-4bb5-86c9-f40ad623cc20",
-        "other": "data segment being described is subordinate to "
+        "testID": "bb12f0f7-976a-4dd8-b4b4-843ef712dcdd",
+        "other": "data segment being described is subordinate to"
       },
       {
         "name": "HL03",
@@ -1184,8 +994,18 @@
         "required": "M",
         "datatype": "ID",
         "limit": "1/2",
-        "testID": "bbb31d0e-99f8-49a9-a6e7-651c12f4e410",
-        "other": "segment. "
+        "testID": "0413b355-7dc3-4a94-b3de-b9062abd4956",
+        "other": "Item"
+      },
+      {
+        "name": "HL04",
+        "id": "736",
+        "desc": "Hierarchical Child Code",
+        "required": "O",
+        "datatype": "ID",
+        "limit": "1/1",
+        "testID": "84de7d0e-9f38-4915-a170-6130b55acdee",
+        "other": "segment."
       }
     ]
   },
@@ -1195,7 +1015,7 @@
     "max": "1",
     "required": false,
     "loop": "HL",
-    "loopID": null,
+    "loopID": "0ba6483b-1a54-4228-8371-6ab4db16f850",
     "list": [
       {
         "name": "LIN01",
@@ -1204,8 +1024,8 @@
         "required": "O",
         "datatype": "AN",
         "limit": "1/20",
-        "testID": "ddf9992c-00ef-4c20-a329-ebbe563e7373",
-        "other": "Alphanumeric characters assigned for differentiation within a transaction set "
+        "testID": "82301d9f-d60c-47d9-8ddb-3c370a896091",
+        "other": "Alphanumeric characters assigned for differentiation within a transaction set"
       },
       {
         "name": "LIN02",
@@ -1214,7 +1034,7 @@
         "required": "M",
         "datatype": "ID",
         "limit": "2/2",
-        "testID": "eb0f0ea8-98ba-4af9-a047-ab561ecfc87e",
+        "testID": "6d39db1c-c7c3-4859-8fca-4b2b28bbf843",
         "other": "Vendor's (Seller's) Part Number"
       },
       {
@@ -1224,8 +1044,8 @@
         "required": "M",
         "datatype": "AN",
         "limit": "1/48",
-        "testID": "6b4da96e-0b5d-4f32-a3ff-321dcbd1c156",
-        "other": "Identifying number for a product or service "
+        "testID": "b0e816fe-efbc-4e5f-a384-72156ddd4862",
+        "other": "Identifying number for a product or service"
       },
       {
         "name": "LIN04",
@@ -1234,7 +1054,7 @@
         "required": "X",
         "datatype": "ID",
         "limit": "2/2",
-        "testID": "1ea0729e-023a-4208-a025-737bb1dec686",
+        "testID": "b9a8ed50-4d14-4d0d-b5cf-370368473585",
         "other": "Stock Keeping Unit (SKU)"
       },
       {
@@ -1244,8 +1064,8 @@
         "required": "X",
         "datatype": "AN",
         "limit": "1/48",
-        "testID": "9e9c4115-5bbe-47df-855d-1c2b57459601",
-        "other": "Identifying number for a product or service "
+        "testID": "e7a329b4-0101-43aa-9193-da4d7e3b70f4",
+        "other": "Identifying number for a product or service"
       },
       {
         "name": "LIN06",
@@ -1254,8 +1074,8 @@
         "required": "X",
         "datatype": "ID",
         "limit": "2/2",
-        "testID": "4edf6d5a-8d64-4454-9ac0-e9739aa324ba",
-        "other": "Universal Product Code (U.P.C.) "
+        "testID": "8a6babd9-5dce-4f35-86b6-d37e724f3b2e",
+        "other": "U.P.C. Consumer Package Code (1-5-5-1)"
       },
       {
         "name": "LIN07",
@@ -1264,8 +1084,8 @@
         "required": "X",
         "datatype": "AN",
         "limit": "1/48",
-        "testID": "02a0be61-06ee-4a9b-99d6-932a078c97a6",
-        "other": "Drawing No., U.P.C. No., ISBN No., Model No., or SKU. "
+        "testID": "64e73fab-1f3d-44dd-8c1c-933b7afb9a3e",
+        "other": "Drawing No., U.P.C. No., ISBN No., Model No., or SKU."
       }
     ]
   },
@@ -1275,7 +1095,7 @@
     "max": "1",
     "required": false,
     "loop": "HL",
-    "loopID": null,
+    "loopID": "0ba6483b-1a54-4228-8371-6ab4db16f850",
     "list": [
       {
         "name": "SN101",
@@ -1284,8 +1104,8 @@
         "required": "O",
         "datatype": "AN",
         "limit": "1/20",
-        "testID": "92618558-02ad-4374-a88e-6397d92ccc2c",
-        "other": "Alphanumeric characters assigned for differentiation within a transaction set "
+        "testID": "0039ce18-1662-4033-ac49-4c7693e8d471",
+        "other": "Alphanumeric characters assigned for differentiation within a transaction set"
       },
       {
         "name": "SN102",
@@ -1294,8 +1114,8 @@
         "required": "M",
         "datatype": "R",
         "limit": "1/10",
-        "testID": "bffcabdf-e073-4373-afda-0db7078ea76e",
-        "other": "item or transaction set "
+        "testID": "2d556921-9f9f-49cb-a1b1-474ef7a0b9b3",
+        "other": "item or transaction set"
       },
       {
         "name": "SN103",
@@ -1304,8 +1124,8 @@
         "required": "M",
         "datatype": "ID",
         "limit": "2/2",
-        "testID": "fc7637fb-c87f-42aa-b157-37c7ada0e048",
-        "other": "SN103 defines the unit of measurement for both SN102 and SN104. "
+        "testID": "ce07499e-4b21-49f0-9527-d043ec67c19e",
+        "other": "SN103 defines the unit of measurement for both SN102 and SN104."
       }
     ]
   },
@@ -1315,7 +1135,7 @@
     "max": "1000",
     "required": false,
     "loop": "HL",
-    "loopID": null,
+    "loopID": "0ba6483b-1a54-4228-8371-6ab4db16f850",
     "list": [
       {
         "name": "SLN01",
@@ -1324,8 +1144,8 @@
         "required": "M",
         "datatype": "AN",
         "limit": "1/20",
-        "testID": "8c9fb3d4-bf55-4de1-a4c4-dd543c987a82",
-        "other": "Alphanumeric characters assigned for differentiation within a transaction set "
+        "testID": "b5066fbc-da77-4ca2-ab6f-0adaabdf3fea",
+        "other": "Alphanumeric characters assigned for differentiation within a transaction set"
       },
       {
         "name": "SLN02",
@@ -1334,8 +1154,8 @@
         "required": "O",
         "datatype": "AN",
         "limit": "1/20",
-        "testID": "03be3789-d094-43c0-94d6-3d1f67ee6dff",
-        "other": "Alphanumeric characters assigned for differentiation within a transaction set "
+        "testID": "27bf51c8-5bf5-4ac8-bfdd-94a7eef42114",
+        "other": "Alphanumeric characters assigned for differentiation within a transaction set"
       },
       {
         "name": "SLN03",
@@ -1344,7 +1164,7 @@
         "required": "M",
         "datatype": "ID",
         "limit": "1/1",
-        "testID": "00f56d41-f80b-4e63-a207-482be550414c",
+        "testID": "de5d9829-8db1-4824-8eb3-24382c34834c",
         "other": "All valid standard codes are used. (Total Codes: 5)"
       },
       {
@@ -1354,8 +1174,8 @@
         "required": "X",
         "datatype": "R",
         "limit": "1/15",
-        "testID": "ba966386-64ef-4148-bd9b-a444217145b4",
-        "other": "Numeric value of quantity "
+        "testID": "931c9409-9a97-4d15-9800-1a014393634c",
+        "other": "Numeric value of quantity"
       },
       {
         "name": "SLN05",
@@ -1364,8 +1184,8 @@
         "required": "X",
         "datatype": "Comp",
         "limit": "NA",
-        "testID": "9edbeb67-8ed9-4371-b27d-8306ac01bc78",
-        "other": "of use) "
+        "testID": "35d8c2c9-cab9-447b-92ec-b4362e62d234",
+        "other": "of use)"
       },
       {
         "name": "SLN05-01",
@@ -1374,8 +1194,148 @@
         "required": "M",
         "datatype": "ID",
         "limit": "2/2",
-        "testID": "21515d6d-0016-4f79-bf52-ec17576f9993",
-        "other": "All valid standard codes are used. (Total Codes: 811)"
+        "testID": "7fe56b59-b88e-4042-bbd5-b65838340d5e",
+        "other": "All valid standard codes are used. (Total Codes: 794)"
+      },
+      {
+        "name": "SLN05-02",
+        "id": "1018",
+        "desc": "Exponent",
+        "required": "O",
+        "datatype": "R",
+        "limit": "1/15",
+        "testID": "c23d31b1-6a02-47a5-b4ab-712b08639e21",
+        "other": "Power to which a unit is raised"
+      },
+      {
+        "name": "SLN05-03",
+        "id": "649",
+        "desc": "Multiplier",
+        "required": "O",
+        "datatype": "R",
+        "limit": "1/10",
+        "testID": "a212b2b5-d3f2-4b4d-9502-8cd6de93fb38",
+        "other": "Value to be used as a multiplier to obtain a new value"
+      },
+      {
+        "name": "SLN05-04",
+        "id": "355",
+        "desc": "Unit or Basis for Measurement Code",
+        "required": "O",
+        "datatype": "ID",
+        "limit": "2/2",
+        "testID": "a33876c9-d39f-4ac1-a2ef-fd69e24aaf9a",
+        "other": "All valid standard codes are used. (Total Codes: 794)"
+      },
+      {
+        "name": "SLN05-05",
+        "id": "1018",
+        "desc": "Exponent",
+        "required": "O",
+        "datatype": "R",
+        "limit": "1/15",
+        "testID": "610b3ed6-907a-43e0-a9fe-5a42d92035f7",
+        "other": "Power to which a unit is raised"
+      },
+      {
+        "name": "SLN05-06",
+        "id": "649",
+        "desc": "Multiplier",
+        "required": "O",
+        "datatype": "R",
+        "limit": "1/10",
+        "testID": "829394a9-2b59-470f-ad0b-7666d5f29dd1",
+        "other": "Value to be used as a multiplier to obtain a new value"
+      },
+      {
+        "name": "SLN05-07",
+        "id": "355",
+        "desc": "Unit or Basis for Measurement Code",
+        "required": "O",
+        "datatype": "ID",
+        "limit": "2/2",
+        "testID": "fd164c52-1f96-4bfe-94ce-cd18d8cec01c",
+        "other": "All valid standard codes are used. (Total Codes: 794)"
+      },
+      {
+        "name": "SLN05-08",
+        "id": "1018",
+        "desc": "Exponent",
+        "required": "O",
+        "datatype": "R",
+        "limit": "1/15",
+        "testID": "d395ef83-1b4d-4091-b4a8-f95a390c7d26",
+        "other": "Power to which a unit is raised"
+      },
+      {
+        "name": "SLN05-09",
+        "id": "649",
+        "desc": "Multiplier",
+        "required": "O",
+        "datatype": "R",
+        "limit": "1/10",
+        "testID": "d4a7d1a1-8b23-4e6e-a50a-e96c7b7542f6",
+        "other": "Value to be used as a multiplier to obtain a new value"
+      },
+      {
+        "name": "SLN05-10",
+        "id": "355",
+        "desc": "Unit or Basis for Measurement Code",
+        "required": "O",
+        "datatype": "ID",
+        "limit": "2/2",
+        "testID": "8d1d93f1-42f0-46e2-9c8b-de10f52d1d85",
+        "other": "All valid standard codes are used. (Total Codes: 794)"
+      },
+      {
+        "name": "SLN05-11",
+        "id": "1018",
+        "desc": "Exponent",
+        "required": "O",
+        "datatype": "R",
+        "limit": "1/15",
+        "testID": "124a3b6b-f76d-4260-9730-89cfcc967e8c",
+        "other": "Power to which a unit is raised"
+      },
+      {
+        "name": "SLN05-12",
+        "id": "649",
+        "desc": "Multiplier",
+        "required": "O",
+        "datatype": "R",
+        "limit": "1/10",
+        "testID": "95c1330e-2a0c-4f1c-b142-e5af6adb1b99",
+        "other": "Value to be used as a multiplier to obtain a new value"
+      },
+      {
+        "name": "SLN05-13",
+        "id": "355",
+        "desc": "Unit or Basis for Measurement Code",
+        "required": "O",
+        "datatype": "ID",
+        "limit": "2/2",
+        "testID": "5e34118c-0631-41b8-9bfa-907dc2032474",
+        "other": "All valid standard codes are used. (Total Codes: 794)"
+      },
+      {
+        "name": "SLN05-14",
+        "id": "1018",
+        "desc": "Exponent",
+        "required": "O",
+        "datatype": "R",
+        "limit": "1/15",
+        "testID": "94ae7f3f-d780-4155-a1ba-108fdc96268c",
+        "other": "Power to which a unit is raised"
+      },
+      {
+        "name": "SLN05-15",
+        "id": "649",
+        "desc": "Multiplier",
+        "required": "O",
+        "datatype": "R",
+        "limit": "1/10",
+        "testID": "3fb2474d-4f05-473e-9858-6a310a1ea055",
+        "other": "Value to be used as a multiplier to obtain a new value"
       },
       {
         "name": "SLN06",
@@ -1384,8 +1344,8 @@
         "required": "X",
         "datatype": "R",
         "limit": "1/17",
-        "testID": "f39a8398-4abb-49d7-9d91-8adc4017016f",
-        "other": "Drawing No., U.P.C. No., ISBN No., Model No., or SKU. "
+        "testID": "bb9b87ea-3a04-4d29-8051-e746060a4da4",
+        "other": "Drawing No., U.P.C. No., ISBN No., Model No., or SKU."
       }
     ]
   },
@@ -1395,7 +1355,7 @@
     "max": "1",
     "required": false,
     "loop": "HL",
-    "loopID": null,
+    "loopID": "0ba6483b-1a54-4228-8371-6ab4db16f850",
     "list": [
       {
         "name": "PO401",
@@ -1404,8 +1364,8 @@
         "required": "O",
         "datatype": "N0",
         "limit": "1/6",
-        "testID": "f2117654-6d59-4afb-b5e5-390951a60c39",
-        "other": "containers, per outer container "
+        "testID": "98d9e45e-adb3-4143-9cde-3d08524a0da3",
+        "other": "containers, per outer container"
       },
       {
         "name": "PO402",
@@ -1414,8 +1374,8 @@
         "required": "X",
         "datatype": "R",
         "limit": "1/8",
-        "testID": "c7efbf64-0af8-49f0-9161-c4b505666d63",
-        "other": "Size of supplier units in pack "
+        "testID": "b5b6bfe8-e913-42af-820d-1e03afeec9e3",
+        "other": "Size of supplier units in pack"
       },
       {
         "name": "PO403",
@@ -1424,18 +1384,18 @@
         "required": "X",
         "datatype": "ID",
         "limit": "2/2",
-        "testID": "848f095d-86e2-424e-bd6f-07d0b70c46eb",
-        "other": "All valid standard codes are used. (Total Codes: 811)"
+        "testID": "e75bb289-8c36-429b-a22b-9f00a66a498a",
+        "other": "All valid standard codes are used. (Total Codes: 794)"
       },
       {
         "name": "PO404",
         "id": "103",
         "desc": "Packaging Code",
-        "required": "O",
+        "required": "X",
         "datatype": "AN",
         "limit": "3/5",
-        "testID": "decbe62c-b1dd-4a31-be5e-7d20542ab743",
-        "other": "would be described as follows: Data element 356 %3D %2224%22%3B Data element 357 %3D %2212%22%3B Data element 355 %3D %22OZ%22. "
+        "testID": "5e25d4cd-d979-46f2-af41-f8a6e0f1edd9",
+        "other": "PO413 defines the unit of measure for PO410, PO411, and PO412."
       }
     ]
   },
@@ -1445,7 +1405,7 @@
     "max": "200",
     "required": false,
     "loop": "HL",
-    "loopID": null,
+    "loopID": "0ba6483b-1a54-4228-8371-6ab4db16f850",
     "list": [
       {
         "name": "PID01",
@@ -1454,7 +1414,7 @@
         "required": "M",
         "datatype": "ID",
         "limit": "1/1",
-        "testID": "525a3fa0-d7c1-4c6e-87f5-0d0e087ff6e9",
+        "testID": "dea58f3c-ea77-4431-a054-becceae4819f",
         "other": "Free-form"
       },
       {
@@ -1464,8 +1424,8 @@
         "required": "X",
         "datatype": "AN",
         "limit": "1/80",
-        "testID": "702d7a75-3253-49b1-be1c-fe3f6c96fafa",
-        "other": "PID07 specifies the individual code list of the agency specified in PID03. "
+        "testID": "7490e4ac-7321-4c15-8f9d-def614eb9458",
+        "other": "PID07 specifies the individual code list of the agency specified in PID03."
       }
     ]
   },
@@ -1484,8 +1444,8 @@
         "required": "M",
         "datatype": "N0",
         "limit": "1/6",
-        "testID": "76184bb3-7b96-49d8-952e-cf758abdee67",
-        "other": "Total number of line items in the transaction set "
+        "testID": "519c9b2a-13bd-4ca4-95a1-96d91e0440ca",
+        "other": "Total number of line items in the transaction set"
       },
       {
         "name": "CTT02",
@@ -1494,8 +1454,58 @@
         "required": "O",
         "datatype": "R",
         "limit": "1/10",
-        "testID": "ca405290-5fce-4375-9b59-06c245321561",
-        "other": "This segment is intended to provide hash totals to validate transaction completeness and correctness. "
+        "testID": "581e8269-b0d9-40b1-b1aa-8ba1d406c007",
+        "other": "truncation. 855 Hash total after truncation to three-digit field."
+      },
+      {
+        "name": "CTT03",
+        "id": "81",
+        "desc": "Weight",
+        "required": "X",
+        "datatype": "R",
+        "limit": "1/10",
+        "testID": "430f0ecc-dc8f-479a-97ca-1d061066760d",
+        "other": "Numeric value of weight"
+      },
+      {
+        "name": "CTT04",
+        "id": "355",
+        "desc": "Unit or Basis for Measurement Code",
+        "required": "X",
+        "datatype": "ID",
+        "limit": "2/2",
+        "testID": "d6edf445-4c1b-4eaf-880e-695db7fe8b3d",
+        "other": "All valid standard codes are used. (Total Codes: 794)"
+      },
+      {
+        "name": "CTT05",
+        "id": "183",
+        "desc": "Volume",
+        "required": "X",
+        "datatype": "R",
+        "limit": "1/8",
+        "testID": "5364e0be-bcf9-45e3-98a4-6b03e2ccf23d",
+        "other": "Value of volumetric measure"
+      },
+      {
+        "name": "CTT06",
+        "id": "355",
+        "desc": "Unit or Basis for Measurement Code",
+        "required": "X",
+        "datatype": "ID",
+        "limit": "2/2",
+        "testID": "06fb3bfc-9faf-4fd0-939a-b8c368530198",
+        "other": "All valid standard codes are used. (Total Codes: 794)"
+      },
+      {
+        "name": "CTT07",
+        "id": "352",
+        "desc": "Description",
+        "required": "O",
+        "datatype": "AN",
+        "limit": "1/80",
+        "testID": "d53c7543-8252-4546-934c-d1a431f7c570",
+        "other": "This segment is intended to provide hash totals to validate transaction completeness and correctness."
       }
     ]
   },
@@ -1514,8 +1524,8 @@
         "required": "M",
         "datatype": "N0",
         "limit": "1/10",
-        "testID": "6ca501e7-0f5e-4211-a967-8b8b00ebbfbd",
-        "other": "A count of the number of segments in the transaction"
+        "testID": "71e9b148-d5ee-4d57-846d-0ace347196dd",
+        "other": "segments"
       },
       {
         "name": "SE02",
@@ -1524,68 +1534,8 @@
         "required": "M",
         "datatype": "AN",
         "limit": "4/9",
-        "testID": "e61822d8-bb02-4be9-a76b-0cee95b2b7e5",
-        "other": "SE is the last segment of each transaction set. "
-      }
-    ]
-  },
-  {
-    "name": "GE",
-    "description": "Functional Group Trailer",
-    "max": "1",
-    "required": true,
-    "loop": "N/A",
-    "loopID": null,
-    "list": [
-      {
-        "name": "GE01",
-        "id": "97",
-        "desc": "Number of Transaction Sets Included",
-        "required": "M",
-        "datatype": "N0",
-        "limit": "1/6",
-        "testID": "d1285383-1b13-43f9-aa80-7dcedc6ba60e",
-        "other": "interchange (transmission) group terminated by the trailer containing this data element"
-      },
-      {
-        "name": "GE02",
-        "id": "28",
-        "desc": "Group Control Number",
-        "required": "M",
-        "datatype": "N0",
-        "limit": "1/9",
-        "testID": "c46f3f30-a1ba-454d-b5fa-cbc4113c7713",
-        "other": "corresponding header."
-      }
-    ]
-  },
-  {
-    "name": "IEA",
-    "description": "Interchange Control Trailer",
-    "max": "1",
-    "required": true,
-    "loop": "N/A",
-    "loopID": null,
-    "list": [
-      {
-        "name": "IEA01",
-        "id": "I16",
-        "desc": "Number of Included Functional Groups",
-        "required": "M",
-        "datatype": "N0",
-        "limit": "1/5",
-        "testID": "b8496a5b-fa65-483b-8384-45df846e31ed",
-        "other": "A count of the number of functional groups included in an interchange"
-      },
-      {
-        "name": "IEA02",
-        "id": "I12",
-        "desc": "Interchange Control Number",
-        "required": "M",
-        "datatype": "N0",
-        "limit": "9/9",
-        "testID": "6d0af25b-f8f5-455c-a195-8d92cfe9922b",
-        "other": "A control number assigned by the interchange sender"
+        "testID": "72652c50-e108-400a-ba4b-00d451399e2c",
+        "other": "SE is the last segment of each transaction set."
       }
     ]
   }
