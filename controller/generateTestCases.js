@@ -3,6 +3,7 @@ const mongooseClient = require('../server/mongooseDB');
 const FileIDModel = require('../model/fileIDModel');
 const TestCasesModel = require('../model/testCasesModel');
 const fs = require('fs');
+const path = require('path');
 
 class Generate {
     constructor(testid) {
@@ -12,7 +13,7 @@ class Generate {
     async process(req, res) {
         
         const getFileId = await FileIDModel.find({'test_id': req.cookies.testID, 'file_type': { $ne: 'txo'}}, {'file_id': 1, _id: 0});
-        console.log(getFileId);
+        //console.log(getFileId);
         const conn = mongooseClient.conn;
         const bucket = new mongoose.mongo.GridFSBucket(conn.db, {bucketName: 'edi_test_inputs'});
 
@@ -34,7 +35,7 @@ class Generate {
 
         Promise.all([spec, data]).then(d => {
             this.testCases(d[0], d[1]);
-            console.log(d);
+            //console.log(d);
         })
 
         res.json({'message': 'Good'});        
@@ -75,7 +76,7 @@ class Generate {
                             copy.splice(i, 1);
                         }
                         let withDelimiter = copy.map(e => e.join('*')).join('~\n');
-                        fs.writeFileSync('./files/'+ Date.now() + '_' + i +'.txt', withDelimiter);
+                        fs.writeFileSync( './controller/files/' + Date.now() + '_' + i +'.txt', withDelimiter);
                     })
                 }
             }

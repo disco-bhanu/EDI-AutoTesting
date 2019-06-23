@@ -5,6 +5,9 @@ import classes from './ConnectToSI.css';
 import { connect } from 'react-redux';
 import * as actions from '../../store/actions';
 
+import Notifier from '../Notifier/Notifier';
+import Aux from '../../hoc/Auxilary';
+
 function mapDispatchToProps(dispatch) {
     return {
         execute: () => dispatch(actions.executeTest())
@@ -105,6 +108,8 @@ class ConnectToSI extends React.Component {
 
     render() {
         return (
+            <Aux>
+            <Notifier/>
             <div className={classes.ConnectToSI} >
                 <h5> UPLOAD FILES </h5>
                 <hr/>
@@ -157,6 +162,7 @@ class ConnectToSI extends React.Component {
                     <button type="button" onClick={() => this.onExecuteTestCasesHandler()}> Generate Test Cases </button>
                 </strong>
             </div>
+            </Aux>
         )
     }
 }
